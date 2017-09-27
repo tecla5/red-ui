@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import panel from '../controllers/panel'
+import panel from './controllers/panel'
 
 export default {
   name: 'panel',

@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import stack from '../controllers/stack'
+import stack from './controllers/stack'
 
 export default {
   name: 'stack',

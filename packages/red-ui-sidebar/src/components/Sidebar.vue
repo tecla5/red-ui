@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import sidebar from '../controllers/sidebar'
+import sidebar from './controllers/sidebar'
 
 export default {
   name: 'sidebar',

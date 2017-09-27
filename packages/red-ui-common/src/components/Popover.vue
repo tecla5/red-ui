@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import popover from '../controllers/popover'
+import popover from './controllers/popover'
 
 export default {
   name: 'popover',

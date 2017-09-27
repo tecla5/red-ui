@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import editableList from '../controllers/editableList'
+import editableList from './controllers/editableList'
 
 export default {
   name: 'editableList',

@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import tabs from '../controllers/tabs'
+import tabs from './controllers/tabs'
 
 export default {
   name: 'tabs',

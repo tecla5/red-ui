@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import checkboxSet from '../controllers/checkboxSet'
+import checkboxSet from './controllers/checkboxSet'
 
 export default {
   name: 'CheckboxSet',

@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import searchBox from '../controllers/searchBox'
+import searchBox from './controllers/searchBox'
 
 export default {
   name: 'searchBox',

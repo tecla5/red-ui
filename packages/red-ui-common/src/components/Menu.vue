@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import menu from '../controllers/menu'
+import menu from './controllers/menu'
 
 export default {
   name: 'menu',

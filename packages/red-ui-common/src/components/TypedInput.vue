@@ -3,7 +3,7 @@
   </div>
 </template>
 <script>
-import typedInput from '../controllers/typedInput'
+import typedInput from './controllers/typedInput'
 
 export default {
   name: 'typedInput',
