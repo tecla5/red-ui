@@ -1,5 +1,9 @@
 <template>
-  <div class="red-ui-sidebar">
+  <div id="sidebar">
+    <ul id="sidebar-tabs"></ul>
+    <div id="sidebar-content"></div>
+    <div id="sidebar-footer"></div>
+    <div id="sidebar-shade" class="hide"></div>
   </div>
 </template>
 <script>
@@ -9,7 +13,7 @@ export default {
   name: 'sidebar',
   created() {
     let options = {}
-    this.$el.querySelector('.red-ui-sidebar').sidebar(options)
+    this.$el.querySelector('#sidebar').sidebar(options)
   }
 }
 </script>
