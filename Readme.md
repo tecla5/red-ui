@@ -11,5 +11,14 @@ See [Lerna Getting Started](https://lernajs.io/#getting-started) for typical dev
 
 ## Packages
 
-- `red-ui-common` Common UI components, used as essential building blocks for more complex UI components
-- ... more to follow
+- `red-ui-app` full app, demonstrating all the components assembled
+- `red-ui-canvas` canvas area for drawing node flows
+- `red-ui-common` common UI components, used as essential building blocks for more complex UI components
+- `red-ui-library` nodes library management
+- `red-ui-node-editor` node editor, form with fields according to node properties
+- `red-ui-palette` node palette
+- `red-ui-search` search for nodes
+- `red-ui-settings` user settings form
+- `red-ui-sidebar` sidebar with multiple tabs
+- `red-ui-tray` sliding tray panel overlay
+- `red-ui-workspaces` workspaces

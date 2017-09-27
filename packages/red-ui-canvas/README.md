@@ -1,8 +1,6 @@
-# red-ui-common
+# red-ui-canvas
 
-> node-red common components
-
-See [Architecture](https://github.com/tecla5/red-ui/blob/master/Architecture.md) for details on internal design and architecture.
+> node-red UI canvas
 
 ## Commands
 

@@ -1,8 +1,6 @@
-# red-ui-common
+# red-ui-search
 
-> node-red common components
-
-See [Architecture](https://github.com/tecla5/red-ui/blob/master/Architecture.md) for details on internal design and architecture.
+> node-red search
 
 ## Commands
 
