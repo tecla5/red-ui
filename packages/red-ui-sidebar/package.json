@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "red-ui-sidebar",
+  "name": "@tecla5/red-ui-sidebar",
   "productName": "red-ui-sidebar",
   "description": "node-red UI sidebar",
   "version": "0.0.0",
@@ -8,20 +8,25 @@
   "scripts": {
     "dev": "poi",
     "build": "poi build",
+    "lerna:update": "npm run lerna:clean && npm run lerna:bootstrap",
+    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-sidebar",
+    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-sidebar",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "cross-env NODE_ENV=test ava"
   },
   "babel": {
     "presets": [
-      ["vue-app", {"useBuiltIns": true}]
+      ["vue-app", {
+        "useBuiltIns": true
+      }]
     ]
   },
   "author": {
     "name": "tecla5",
     "email": "kmandrup@gmail.com"
   },
-	"ava": {
+  "ava": {
     "babel": "inherit",
     "require": [
       "./test/helpers/setup.js"

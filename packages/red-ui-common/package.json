@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "red-ui-common",
+  "name": "@tecla5/red-ui-common",
   "productName": "red-ui-common",
   "description": "node-red common components",
   "version": "0.0.1",
@@ -8,6 +8,9 @@
   "scripts": {
     "dev": "poi",
     "build": "poi build",
+    "lerna:update": "npm run lerna:clean && npm run lerna:bootstrap",
+    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-common",
+    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-common",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "cross-env NODE_ENV=test ava"

@@ -4,10 +4,59 @@ Node-red UI for Vue 2.x.
 
 ## Lerna project
 
-This is a [lerna](https://lernajs.io/) project.
-The project will contain multiple related packages that can be managed as a whole.
+*Red-UI* is a [lerna](https://lernajs.io/) project.
+The project contains multiple related packages that can be managed as a unit.
 
 See [Lerna Getting Started](https://lernajs.io/#getting-started) for typical development workflow.
+
+## Lerna Dependencies
+
+A lerna package can been configured with dependencies such as demonstrated in the `red-ui-app` package:
+
+```txt
+  "dependencies": {
+    ...
+    "@tecla5/red-ui-sidebar": "x",
+    "@tecla5/red-ui-canvas": "x",
+    "@tecla5/red-ui-palette": "x"
+    ...
+  }
+```
+
+Lerna will link to matching local packages in `red-ui` if available. If not found locally it will resolve via npm registry.
+
+This makes it easy to develop multiple inter-dependent packages simultaneously.
+
+### Lerna quick update
+
+To make lerna easier to use, each package comes with a `lerna:update` script which updates all dependencies via lerna.
+
+From the root folder of any package (such as `/red-ui/packages/red-ui-app`):
+
+```bash
+red-ui/packages/red-ui-app $ npm run lerna:update
+# lerna info ...
+```
+
+This will update and resolve all dependencies via lerna.
+
+Note that dependencies linked locally are linked via symbolic link as if the files are present inside the host project itself.
+
+### Scoped lerna (manual)
+
+To update dependencies of a single project:
+
+remove `package.json.lock`
+
+Delete out all module dependencies in `/node_modules`
+
+`$ lerna clean --scope @tecla5/service-faker`
+
+Bootstrap package, by installing/linking new modules
+
+`$ lerna bootstrap --scope @tecla5/service-faker`
+
+This should also create a brand new `package.json.lock`
 
 ## Packages
 

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "red-ui-search",
+  "name": "@tecla5/red-ui-search",
   "productName": "red-ui-search",
   "description": "node-red search",
   "version": "0.0.0",
@@ -8,20 +8,25 @@
   "scripts": {
     "dev": "poi",
     "build": "poi build",
+    "lerna:update": "npm run lerna:clean && npm run lerna:bootstrap",
+    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-search",
+    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-search",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "cross-env NODE_ENV=test ava"
   },
   "babel": {
     "presets": [
-      ["vue-app", {"useBuiltIns": true}]
+      ["vue-app", {
+        "useBuiltIns": true
+      }]
     ]
   },
   "author": {
     "name": "tecla5",
     "email": "kmandrup@gmail.com"
   },
-	"ava": {
+  "ava": {
     "babel": "inherit",
     "require": [
       "./test/helpers/setup.js"

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "red-ui-app",
+  "name": "@tecla5/red-ui-app",
   "productName": "red-ui-app",
   "description": "node-red full app",
   "version": "0.0.0",
@@ -8,20 +8,25 @@
   "scripts": {
     "dev": "poi",
     "build": "poi build",
+    "lerna:update": "npm run lerna:clean && npm run lerna:bootstrap",
+    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-app",
+    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-app",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "cross-env NODE_ENV=test ava"
   },
   "babel": {
     "presets": [
-      ["vue-app", {"useBuiltIns": true}]
+      ["vue-app", {
+        "useBuiltIns": true
+      }]
     ]
   },
   "author": {
     "name": "tecla5",
     "email": "kmandrup@gmail.com"
   },
-	"ava": {
+  "ava": {
     "babel": "inherit",
     "require": [
       "./test/helpers/setup.js"
@@ -30,7 +35,10 @@
   "dependencies": {
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
-    "promise-polyfill": "^6.0.2"
+    "promise-polyfill": "^6.0.2",
+    "@tecla5/red-ui-sidebar": "x",
+    "@tecla5/red-ui-canvas": "x",
+    "@tecla5/red-ui-palette": "x"
   },
   "devDependencies": {
     "poi": "^9.0.0",
