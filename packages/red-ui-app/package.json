@@ -38,7 +38,8 @@
     "promise-polyfill": "^6.0.2",
     "@tecla5/red-ui-sidebar": "x",
     "@tecla5/red-ui-canvas": "x",
-    "@tecla5/red-ui-palette": "x"
+    "@tecla5/red-ui-palette": "x",
+    "@tecla5/red-ui-common": "x"
   },
   "devDependencies": {
     "poi": "^9.0.0",

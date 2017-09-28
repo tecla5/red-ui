@@ -20,19 +20,14 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Components
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Palette` library of flows
 
 ## Controllers
 
 Classes
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Palette` library of flows
 
 ## Design
 
 The Vue `component` should instantiate a `controller` which controls the component. The Vue component itself should for now contain minimal logic necessary and act only as a wrapper.
-
-## Dependencies
-
-- `Tray` from `red-ui-tray` is displayed in a tray
-- `Panel` from `red-ui-common` is a panel

@@ -20,14 +20,19 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Components
 
-- `Diff` library of flows
+- `Diff` node difference visualizer
 
 ## Controllers
 
 Classes
 
-- `Diff` library of flows
+- `Diff` node difference visualizer
 
 ## Design
 
 The Vue `component` should instantiate a `controller` which controls the component. The Vue component itself should for now contain minimal logic necessary and act only as a wrapper.
+
+## Dependencies
+
+- `Tray` from `red-ui-tray` is displayed in a tray
+- `Panel` from `red-ui-common` is a panel

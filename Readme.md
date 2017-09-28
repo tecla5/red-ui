@@ -2,6 +2,27 @@
 
 Node-red UI for Vue 2.x.
 
+## Packages
+
+This [lerna](https://lernajs.io/) project contains the following packages:
+
+- `red-ui-app` Full application
+- `red-ui-canvas` Canvas for flows drawing, using [D3](https://d3js.org/)
+- `red-ui-common` Common UI base components used as building blocks
+- `red-ui-library` Manage libraries of flows
+- `red-ui-node-diff` Node difference visualizer
+- `red-ui-node-editor` Node editor, form with fields for node properties
+- `red-ui-palette` Palette of available nodes to be used on canvas
+- `red-ui-search` Search for matching nodes
+- `red-ui-settings` User settings management
+- `red-ui-shared` Various shared assets
+- `red-ui-sidebar` Sidebar with tabs for extra info and management
+- `red-ui-tray` Slide-over modal tray panel (for Node Editor etc.)
+- `red-ui-workspaces` Manage workspaces (ie. projects)
+
+Each package is a separate node module and can be published as such.
+Lerna is used to manage the module workflow, link package dependencies etc.
+
 ## Lerna project
 
 *Red-UI* is a [lerna](https://lernajs.io/) project.

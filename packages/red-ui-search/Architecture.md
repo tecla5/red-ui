@@ -20,13 +20,13 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Components
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Search` search box and results display
 
 ## Controllers
 
 Classes
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Search` search box and results display
 
 ## Design
 
@@ -34,5 +34,4 @@ The Vue `component` should instantiate a `controller` which controls the compone
 
 ## Dependencies
 
-- `Tray` from `red-ui-tray` is displayed in a tray
-- `Panel` from `red-ui-common` is a panel
+- `SearchBox` from `red-ui-common` displays a search box

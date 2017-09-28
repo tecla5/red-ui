@@ -20,13 +20,13 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Components
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Workspaces` workspaces (ie. projects)
 
 ## Controllers
 
 Classes
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Workspaces` workspaces (ie. projects)
 
 ## Design
 
@@ -34,5 +34,7 @@ The Vue `component` should instantiate a `controller` which controls the compone
 
 ## Dependencies
 
-- `Tray` from `red-ui-tray` is displayed in a tray
+The Workspaces are displayed in the sidebar (I think), so as a panel in a tab.
+
 - `Panel` from `red-ui-common` is a panel
+- `Tabs` from `red-ui-common` in a tab

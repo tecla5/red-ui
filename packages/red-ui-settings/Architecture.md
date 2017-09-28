@@ -20,13 +20,13 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Components
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Settings` user settings management form
 
 ## Controllers
 
 Classes
 
-- `Editor` node editor, ie. tray panel with form containing fields for node properties
+- `Settings` user settings management form
 
 ## Design
 
