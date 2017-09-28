@@ -2,6 +2,8 @@
 
 > node-red common components
 
+## Architecture
+
 See [Architecture](https://github.com/tecla5/red-ui/blob/master/Architecture.md) for details on internal design and architecture.
 
 ## Commands

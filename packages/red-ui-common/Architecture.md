@@ -1,5 +1,10 @@
 # Architecture
 
+## Build
+
+The build and packaging is done via [Poi](https://poi.js.org/#/)
+Configure the build process via `poi.config.js`, such as adding additional build plugins for [SASS](http://sass-lang.com/) etc.
+
 ## Components
 
 - `CheckboxSet` (deprecated?)
