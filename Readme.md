@@ -2,6 +2,10 @@
 
 Node-red UI for Vue 2.x.
 
+This project contains packages for the (main) components used in the [node-red](nodered.org/) [editor](https://github.com/node-red/node-red/tree/master/editor), originally extracted and partly refactore in [red-editor](https://github.com/tecla5/red-editor).
+
+Each package is a [Vue 2](vuejs.org/) project created via [create-vue-app](https://www.npmjs.com/package/create-vue-app) CLI.
+
 ## Packages
 
 This [lerna](https://lernajs.io/) project contains the following packages:
@@ -22,6 +26,20 @@ This [lerna](https://lernajs.io/) project contains the following packages:
 
 Each package is a separate node module and can be published as such.
 Lerna is used to manage the module workflow, link package dependencies etc.
+
+## Development Strategy
+
+The goal is to wrap each of the node-red components in Vue components, then gradually remove the jQuery logic to use Vue data binding logic instead.
+
+Components should first be configured to work as a "blank slate", simply as a div with a placeholder message for the component:
+
+```html
+<div id="sidebar">
+  <h3>Sidebar</h3>
+</div>
+```
+
+Then assemble the components, bottom up and assemble the top level components in the `red-ui-app` package for a full static page.
 
 ## Lerna project
 
@@ -79,7 +97,7 @@ Bootstrap package, by installing/linking new modules
 
 This should also create a brand new `package.json.lock`
 
-## Packages
+## Packages included
 
 - `red-ui-app` full app, demonstrating all the components assembled
 - `red-ui-canvas` canvas area for drawing node flows
@@ -104,3 +122,4 @@ Some components will be refactored into multiple smaller components to make them
 ## HTML templates
 
 For the "base" HTML to be used in the components (and main app), please reference `/assets/templates` folder under `/red-ui-shared` package.
+
