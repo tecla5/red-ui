@@ -18,13 +18,11 @@
   </div>
 </template>
 <script>
-import sidebar from './controllers/sidebar'
-
+const log = console.log
 export default {
-  name: 'sidebar',
+  name: 'header',
   created() {
-    let options = {}
-    this.$el.querySelector('#sidebar').sidebar(options)
+    log('header')
   }
 }
 </script>

@@ -62,18 +62,20 @@
   </div>
 </template>
 <script>
-// import Palette from 'red-ui-palette/components/Palette'
-// import Canvas from 'red-ui-canvas/components/Canvas'
-// import Sidebar from 'red-ui-sidebar/components/Sidebar'
+const log = console.log
+import Palette from '@tecla5/red-ui-palette/src/components/Palette'
+import Canvas from '@tecla5/red-ui-canvas/src/components/Canvas'
+import Sidebar from '@tecla5/red-ui-sidebar/src/components/Sidebar'
 
 export default {
   name: 'mainContainer',
-  // components: {
-  //   'red-palette': Palette,
-  //   'red-canvas': Canvas,
-  //   'red-sidebar': Sidebar
-  // },
+  components: {
+    'red-palette': Palette,
+    'red-canvas': Canvas,
+    'red-sidebar': Sidebar
+  },
   created() {
+    log('mainContainer')
   }
 }
 </script>

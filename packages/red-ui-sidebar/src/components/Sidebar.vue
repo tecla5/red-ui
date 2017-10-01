@@ -7,13 +7,15 @@
   </div>
 </template>
 <script>
-import sidebar from './controllers/sidebar'
+const log = console.log
+// import sidebar from './controllers/sidebar'
 
 export default {
   name: 'sidebar',
   created() {
+    log('sidebar')
     let options = {}
-    this.$el.querySelector('#sidebar').sidebar(options)
+    // this.$el.querySelector('#sidebar').sidebar(options)
   }
 }
 </script>

@@ -9,21 +9,26 @@
 </template>
 
 <script>
-// import Header from 'red-ui-palette/components/Header'
-// import MainContainer from 'red-ui-palette/components/MainContainer'
+const log = console.log
+import Header from './Header'
+import MainContainer from './MainContainer'
+import Notifications from './Notifications'
 // import Notifications from 'red-ui-notifications/components/Notifications'
-// import DropTarget from './DropTarget'
-// import ConfirmDeploy from './ConfirmDeploy'
+import DropTarget from './DropTarget'
+import ConfirmDeploy from './ConfirmDeploy'
 
 export default {
   name: 'mainContainer',
-  // components: {
-  //   'red-header': Header
-  //   'red-main-container': MainContainer,
-  //   'red-notifications': Notifications,
-  //   'red-drop-target': DropTarget
-  //   'red-confirm-deploy': ConfirmDeploy
-  // },
+  components: {
+    'red-header': Header,
+    'red-main-container': MainContainer,
+    'red-notifications': Notifications,
+    'red-drop-target': DropTarget,
+    'red-confirm-deploy': ConfirmDeploy
+  },
+  created() {
+
+  }
 }
 </script>
 

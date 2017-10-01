@@ -4,12 +4,13 @@
   </div>
 </template>
 <script>
-
+const log = console.log
 export default {
   name: 'dropTarget',
   beforeCreate() {
   },
   created() {
+    log('dropTarget')
   }
 
 }
