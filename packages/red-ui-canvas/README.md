@@ -2,6 +2,13 @@
 
 > node-red UI canvas
 
+## Getting started
+
+```bash
+npm install
+npm run lerna:update
+```
+
 ## Commands
 
 You can replace `yarn` with `npm run` here.
