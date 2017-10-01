@@ -19,14 +19,15 @@
 </template>
 <script>
 const log = console.log
+import data from './data/default-context.js'
+
 export default {
   name: 'header',
+  data,
   created() {
     log('header')
   }
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss" src="./styles/header.scss"></style>
