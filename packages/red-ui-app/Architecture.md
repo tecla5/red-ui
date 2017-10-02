@@ -20,30 +20,40 @@ See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/maste
 
 ## Rendering home page
 
-The standard configuration uses `index.ejs`  to render the home page (ie. Single Page Application) via [EJS](http://www.embeddedjs.com/) templating.
+The app uses `index.ejs`  to render the home page (ie. Single Page Application) via [EJS](http://www.embeddedjs.com/) templating.
 
-The `home.ejs` contains the template for rendering the `node-red` home page.
+The original node-red mustache template can be found in `/templates/index.mst` for reference.
 
-When developing, please substitute `home.ejs` with `index.ejs` and work from there.
+The data for the EJS template is configured in `poi.config.js` in the `html` entry.
+You can change the `template` being used, set the page `title` etc.
 
-## Development process
+The Vue app uses [Poi](https://poi.js.org/) asset loading (via [Webpack](https://webpack.js.org/)) to load all assets, including vendor libs, stylesheets, fonts etc.
 
-Use the main components from this and other packages to assemble the full skeleton layout of the application;
+```js
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap-themen.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
+```
 
-- `Header` (this package)
-- `MainContainer` in `red-ui-main-container`
+## Composition and dependencies
 
-This package has been configured with the following dependencies which lerna will resolve:
+The app is composed from the following main components:
+
+- `Header` from `red-ui-header`
+- `MainContainer` from `red-ui-main-container`
+
+The `package.json` has the following dependencies:
 
 ```txt
   "dependencies": {
     ...
-    "@tecla5/red-ui-header": "x",
-    "@tecla5/red-ui-main-container": "x",
+    "@tecla5/red-ui-header": "^0.0.0",
+    "@tecla5/red-ui-main-container": "^0.0.0",
     ...
   }
 ```
 
-For starters, each of the top level components should be empty except for a placeholder text with the name of the component.
+## Development process
 
-Compose using the `Header` and `MainContainer`
+Use Lerna with `lerna:update` to manage dependencies.

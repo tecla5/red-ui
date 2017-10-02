@@ -8,6 +8,8 @@ module.exports = {
   ],
   html: {
     title: pkg.productName,
+    favicon: 'favicon.ico',
+    tabicon: './images/node-red-icon-black.svg',
     description: pkg.description,
     template: path.join(__dirname, 'index.ejs')
   },
