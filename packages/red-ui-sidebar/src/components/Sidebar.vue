@@ -5,6 +5,7 @@
     <div id="sidebar-footer"></div>
     <div id="sidebar-shade" class="hide"></div>
   </div>
+  </div>
 </template>
 <script>
 const log = console.log

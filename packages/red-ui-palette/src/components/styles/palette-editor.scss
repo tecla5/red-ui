@@ -14,6 +14,8 @@
  * limitations under the License.
  **/
 
+@import 'colors';
+@import 'mixins';
 #user-settings-tab-palette {
     height: 100%;
 }
@@ -24,24 +26,20 @@
     top: 0px;
     right: 0;
     bottom: 0;
-    left:0;
+    left: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     background: #fff;
-
     .red-ui-editableList-container {
         border: none;
         border-radius: 0;
         padding: 0px;
-
-
         li {
             // border: none;
             // border-top: 1px solid $primary-border-color;
             padding: 0px;
             .disabled {
                 background: #f3f3f3;
-
                 .palette-module-name {
                     font-style: italic;
                     color: #aaa;
@@ -49,9 +47,6 @@
                 .palette-module-version {
                     color: #aaa;
                 }
-
-
-
             }
             .red-ui-editableList-item-content {
                 padding: 12px 16px;
@@ -60,14 +55,13 @@
                 // border-bottom: 1px solid $primary-border-color;
             }
         }
-
     }
     .palette-editor-tab {
-        position:absolute;
-        top:35px;
-        left:0;
-        right:0;
-        bottom:0
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        bottom: 0
     }
     .palette-editor-toolbar {
         background: #f3f3f3;
@@ -95,14 +89,12 @@
     .palette-module-shade-status {
         color: #666;
     }
-
     .palette-module-meta {
         color: #666;
         position: relative;
         &.disabled {
             color: #ccc;
         }
-
         .fa {
             width: 15px;
             text-align: center;
@@ -113,8 +105,10 @@
         white-space: nowrap;
         @include enable-selection;
     }
-    .palette-module-version, .palette-module-updated, .palette-module-link {
-        font-style:italic;
+    .palette-module-version,
+    .palette-module-updated,
+    .palette-module-link {
+        font-style: italic;
         font-size: 0.8em;
         @include enable-selection;
     }
@@ -124,16 +118,13 @@
     .palette-module-link {
         margin-left: 5px;
     }
-
     .palette-module-description {
         margin-left: 20px;
         font-size: 0.9em;
         color: #999;
     }
-    .palette-module-link {
-    }
-    .palette-module-set-button-group {
-    }
+    .palette-module-link {}
+    .palette-module-set-button-group {}
     .palette-module-count {
         border-radius: 4px;
         background: #eee;
@@ -154,13 +145,12 @@
         i.fa.palette-module-node-chevron {
             transform: rotate(90deg);
         }
-
         .palette-module-set-button {
-            background:#f3f3f3 !important;
+            background: #f3f3f3 !important;
         }
     }
     .palette-module-set {
-        border:1px solid $secondary-border-color;
+        border: 1px solid $secondary-border-color;
         border-radius: 0;
         padding: 5px;
         position: relative;
@@ -176,7 +166,6 @@
             border-bottom-left-radius: 2px;
         }
     }
-
     .palette-module-type {
         color: #666;
         padding-left: 5px;
@@ -198,7 +187,6 @@
         right: 4px;
         top: 4px;
     }
-
     .palette-module-set-disabled {
         background: #eee;
         .palette-module-type {
@@ -215,12 +203,10 @@
             text-align: center;
             padding: 12px 8px;
             color: #AD1625;
-
             &:hover {
                 text-decoration: none;
                 background: $tab-background-hover;
             }
         }
     }
-
 }

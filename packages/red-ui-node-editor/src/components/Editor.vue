@@ -1,5 +1,5 @@
 <template>
-  <div class="red-ui-editor">
+  <div id="editor-stack">
   </div>
 </template>
 <script>

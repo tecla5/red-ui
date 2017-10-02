@@ -1,78 +1,28 @@
 <template>
   <div id="main-container">
     <div id="main-container" class="sidebar-closed hide">
-      <div id="workspace">
-        <ul id="workspace-tabs"></ul>
-        <div id="chart" tabindex="1"></div>
-        <div id="workspace-toolbar"></div>
-        <div id="workspace-footer">
-          <a class="workspace-footer-button" id="btn-zoom-out" href="#">
-            <i class="fa fa-minus"></i>
-          </a>
-          <a class="workspace-footer-button" id="btn-zoom-zero" href="#">
-            <i class="fa fa-circle-o"></i>
-          </a>
-          <a class="workspace-footer-button" id="btn-zoom-in" href="#">
-            <i class="fa fa-plus"></i>
-          </a>
-        </div>
-        <div id="editor-shade" class="hide"></div>
-      </div>
-      <div id="editor-stack"></div>
-      <div id="palette">
-        <img src="red/images/spin.svg" class="palette-spinner hide" />
-        <div id="palette-search" class="palette-search hide">
-          <input type="text" data-i18n="[placeholder]palette.filter"></input>
-        </div>
-        <div id="palette-editor">
-          <div class="editor-tray-header">
-            <div class="editor-tray-titlebar">
-              <ul class="editor-tray-breadcrumbs">
-                <li data-i18n="palette.editor.title"></li>
-              </ul>
-            </div>
-            <div class="editor-tray-toolbar">
-              <button id="palette-editor-close" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only primary" role="button" aria-disabled="false" data-i18n="common.label.done"></button>
-            </div>
-          </div>
-          <ul id="palette-editor-tabs"></ul>
-        </div>
-        <div id="palette-container" class="palette-scroll hide"></div>
-        <div id="palette-footer">
-          <a class="palette-button" id="palette-collapse-all" href="#">
-            <i class="fa fa-angle-double-up"></i>
-          </a>
-          <a class="palette-button" id="palette-expand-all" href="#">
-            <i class="fa fa-angle-double-down"></i>
-          </a>
-        </div>
-        <div id="palette-shade" class="hide"></div>
-      </div>
-      <!-- /palette -->
-      <div id="sidebar">
-        <ul id="sidebar-tabs"></ul>
-        <div id="sidebar-content"></div>
-        <div id="sidebar-footer"></div>
-        <div id="sidebar-shade" class="hide"></div>
-      </div>
-
+      <red-workspace />
+      <red-palette />
+      <red-editor />
+      <red-sidebar />
       <div id="sidebar-separator"></div>
-
     </div>
   </div>
 </template>
 <script>
 const log = console.log
 import Palette from '@tecla5/red-ui-palette/src/components/Palette'
-import Canvas from '@tecla5/red-ui-canvas/src/components/Canvas'
+import Editor from '@tecla5/red-ui-node-editor/src/components/Editor'
 import Sidebar from '@tecla5/red-ui-sidebar/src/components/Sidebar'
+import Workspace from '@tecla5/red-ui-workspaces/src/components/Workspace'
 
 export default {
   name: 'mainContainer',
   components: {
     'red-palette': Palette,
-    'red-canvas': Canvas,
-    'red-sidebar': Sidebar
+    'red-editor': Editor,
+    'red-sidebar': Sidebar,
+    'red-workspace': Workspace
   },
   created() {
     log('mainContainer')

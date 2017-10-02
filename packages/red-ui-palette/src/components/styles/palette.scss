@@ -14,12 +14,16 @@
  * limitations under the License.
  **/
 
+@import 'mixins';
+@import 'colors';
+@import 'tab-config';
+@import 'tab-info';
 
 #palette {
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left:0px;
+    left: 0px;
     background: #f3f3f3;
     width: 180px;
     text-align: center;
@@ -31,31 +35,46 @@
 .palette-expanded {
     & #palette {
         width: 380px;
-        box-shadow: 1px 0 6px rgba(0,0,0,0.1);
+        box-shadow: 1px 0 6px rgba(0, 0, 0, 0.1);
     }
-    & #workspace { left: 379px !important; }
-    & #palette-collapse-all { display: none; }
-    & #palette-expand-all { display: none; }
-    & #palette-container { display: none !important; }
-    & #palette-search { display: none !important; }
-    & #palette-edit { background: $workspace-button-background-active }
-    & #palette-editor { display: block !important }
+    & #workspace {
+        left: 379px !important;
+    }
+    & #palette-collapse-all {
+        display: none;
+    }
+    & #palette-expand-all {
+        display: none;
+    }
+    & #palette-container {
+        display: none !important;
+    }
+    & #palette-search {
+        display: none !important;
+    }
+    & #palette-edit {
+        background: $workspace-button-background-active
+    }
+    & #palette-editor {
+        display: block !important
+    }
 }
-
 
 .palette-scroll {
     position: absolute;
     top: 35px;
     right: 0;
     bottom: 25px;
-    left:0;
+    left: 0;
     padding: 0;
     overflow-y: auto;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
-#palette > .palette-spinner {
+
+#palette>.palette-spinner {
     padding-top: 80px;
 }
+
 .palette-search {
     position: relative;
     overflow: hidden;
@@ -64,20 +83,21 @@
     height: 35px;
     padding: 3px;
     border-bottom: 1px solid $primary-border-color;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 #palette-footer {
     @include component-footer;
 }
+
 .palette-button {
     @include component-footer-button;
 }
 
-
 .palette-category {
     border-bottom: 1px solid #ccc;
 }
+
 .palette-content {
     background: #fff;
     padding: 3px;
@@ -93,8 +113,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
 }
+
 .palette-header i {
     margin: 3px 10px 3px 3px;
     -webkit-transition: all 0.2s ease-in-out;
@@ -104,14 +124,17 @@
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
 }
+
 .palette-header i.expanded {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
 }
+
 .palette-header span {
     clear: both;
 }
+
 .palette_label {
     font-size: 13px;
     margin: 4px 0 4px 32px;
@@ -120,13 +143,14 @@
     text-align: center;
     @include disable-selection;
 }
+
 .palette_label_right {
     margin: 4px 32px 4px 0;
 }
 
 .palette_node {
     display: block;
-    cursor:move;
+    cursor: move;
     background: #ddd;
     margin: 10px auto;
     height: 25px;
@@ -138,24 +162,27 @@
     background-size: contain;
     position: relative;
 }
+
 .palette_node:hover {
     border-color: $node-selected-color;
     background-color: #eee;
 }
+
 .palette_port {
     position: absolute;
-    top:8px;
+    top: 8px;
     left: -5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background:#d9d9d9;
+    background: #d9d9d9;
     border-radius: 3px;
     width: 10px;
     height: 10px;
     border: 1px solid #999;
 }
+
 .palette_port_output {
-    left:auto;
+    left: auto;
     right: -6px;
 }
 
@@ -163,22 +190,25 @@
     border-color: #999;
     background-color: #eee;
 }
+
 .palette_icon_container {
     position: absolute;
     text-align: center;
-    top:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: 30px;
-    border-right: 1px solid rgba(0,0,0,0.1);
-    background-color: rgba(0,0,0,0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }
+
 .palette_icon_container_right {
     left: auto;
     right: 0;
     border-right: none;
-    border-left: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .palette_icon {
     display: inline-block;
     width: 20px;
@@ -196,7 +226,6 @@
     margin: 3px 0px;
     vertical-align: middle;
     cursor: default;
-
     .palette_icon_container {
         width: 18px;
         border-right: none;

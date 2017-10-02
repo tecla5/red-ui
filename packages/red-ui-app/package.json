@@ -39,10 +39,10 @@
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2",
-    "@tecla5/red-ui-sidebar": "x",
-    "@tecla5/red-ui-canvas": "x",
     "@tecla5/red-ui-palette": "x",
-    "@tecla5/red-ui-common": "x"
+    "@tecla5/red-ui-node-editor": "x",
+    "@tecla5/red-ui-sidebar": "x",
+    "@tecla5/red-ui-workspaces": "x"
   },
   "devDependencies": {
     "ava": "^0.19.1",
