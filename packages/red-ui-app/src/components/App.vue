@@ -63,7 +63,8 @@ export default {
     'red-confirm-deploy': ConfirmDeploy
   },
   created() {
-
+    // start runtime
+    // runtime.main() // see main.js
   }
 }
 </script>

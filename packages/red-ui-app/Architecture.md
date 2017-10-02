@@ -54,6 +54,28 @@ The `package.json` has the following dependencies:
   }
 ```
 
+## App
+
+The main app should import the `api` and `runtime` and start the runtime when the app component is fully loaded and created.
+
+```js
+import api from '@tecla5/red-api'
+import runtime from '@tecla5/red-runtime'
+
+export default {
+  name: 'mainContainer',
+  components: {
+    'red-header': Header,
+    'red-main-container': MainContainer,
+    // ...
+  },
+  created() {
+    // start runtime
+    runtime.main() // see main.js
+  }
+}
+```
+
 ## Development process
 
 Use Lerna with `lerna:update` to manage dependencies.
