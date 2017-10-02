@@ -3,11 +3,13 @@
   </div>
 </template>
 <script>
+const log = console.log
 import popover from './controllers/popover'
 
 export default {
   name: 'popover',
   created() {
+    log('popover')
     let options = {}
     this.$el.querySelector('.red-ui-popover').popover(options)
   }

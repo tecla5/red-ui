@@ -1,20 +1,43 @@
 <template>
   <div id="app">
     <red-checkbox-set />
-    <red-editable-list />
   </div>
 </template>
 
 <script>
+// <red-editable-list />
+// <red-menu />
+// <red-panel />
+// <red-popover />
+// <red-searchbox />
+// <red-stack />
+// <red-tabs />
+// <red-typed-input />
+
+const log = console.log
 import CheckboxSet from './CheckboxSet'
-import EditableList from './EditableList'
+// import EditableList from './EditableList'
+// import Menu from './Menu'
+// import Panel from './Panel'
+// import Popover from './Popover'
+// import SearchBox from './SearchBox'
+// import Stack from './Stack'
+// import Tabs from './Tabs'
+// import TypedInput from './TypedInput'
 // ...
 
 export default {
   name: 'app',
   components: {
     'red-checkbox-set': CheckboxSet,
-    'red-editable-list': EditableList,
+    // 'red-editable-list': EditableList,
+    // 'red-menu': Menu,
+    // 'red-panel': Panel,
+    // 'red-popover': Popover,
+    // 'red-searchbox': SearchBox,
+    // 'red-stack': Stack,
+    // 'red-tabs': Tabs,
+    // 'red-typed-input': TypedInput
     // ...
   }
 }

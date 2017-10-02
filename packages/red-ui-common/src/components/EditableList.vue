@@ -3,11 +3,13 @@
   </div>
 </template>
 <script>
+const log = console.log
 import editableList from './controllers/editableList'
 
 export default {
   name: 'editableList',
   created() {
+    log('editableList')
     let options = {}
     this.$el.querySelector('.red-ui-editableList').editableList(options)
   }

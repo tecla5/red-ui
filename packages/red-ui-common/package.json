@@ -17,9 +17,12 @@
   },
   "babel": {
     "presets": [
-      ["vue-app", {
-        "useBuiltIns": true
-      }]
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
     ]
   },
   "author": {
@@ -33,19 +36,23 @@
     ]
   },
   "dependencies": {
+    "jquery-ui-dist": "^1.12.1",
+    "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
+    "browser-env": "^2.0.31",
+    "cross-env": "^5.0.0",
+    "node-sass": "^4.5.3",
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
-    "serve": "^6.1.0",
-    "ava": "^0.19.1",
-    "cross-env": "^5.0.0",
-    "browser-env": "^2.0.31",
     "require-extension-hooks": "^0.2.0",
+    "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^0.3.1",
-    "require-extension-hooks-babel": "^0.1.1"
+    "sass-loader": "^6.0.6",
+    "serve": "^6.1.0"
   }
 }

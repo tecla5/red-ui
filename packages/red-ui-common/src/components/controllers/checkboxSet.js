@@ -13,7 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+
+// jquery-ui and webpack, how to manage it into module?
+// https://stackoverflow.com/questions/33998262/jquery-ui-and-webpack-how-to-manage-it-into-module
+
+// Full GUIDE
+// http://code.tonytuan.org/2017/03/webpack-import-jquery-ui-in-es6-syntax.html
+
+// jquery
+import $ from 'jquery/dist/jquery.min'
+import jQuery from 'jquery-ui-dist/jquery-ui.min'
+import 'jquery-ui-dist/jquery-ui.min.css'
+import 'jquery-ui-dist/jquery-ui.structure.min.css'
+import 'jquery-ui-dist/jquery-ui.theme.min.css'
+
 export default (function ($) {
+  console.log({
+    jQuery: $
+  })
+
   $.widget("nodered.checkboxSet", {
     _create: function () {
       var that = this;

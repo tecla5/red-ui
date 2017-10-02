@@ -3,11 +3,13 @@
   </div>
 </template>
 <script>
+const log = console.log
 import stack from './controllers/stack'
 
 export default {
   name: 'stack',
   created() {
+    log('stack')
     let options = {}
     this.$el.querySelector('.red-ui-stack').stack(options)
   }
