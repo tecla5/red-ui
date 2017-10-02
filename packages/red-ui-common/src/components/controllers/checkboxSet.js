@@ -20,18 +20,12 @@
 // Full GUIDE
 // http://code.tonytuan.org/2017/03/webpack-import-jquery-ui-in-es6-syntax.html
 
-// jquery
-import $ from 'jquery/dist/jquery.min'
-import jQuery from 'jquery-ui-dist/jquery-ui.min'
-import 'jquery-ui-dist/jquery-ui.min.css'
-import 'jquery-ui-dist/jquery-ui.structure.min.css'
-import 'jquery-ui-dist/jquery-ui.theme.min.css'
+// jQuery
+import {
+  jQuery
+} from './jquery';
 
 export default (function ($) {
-  console.log({
-    jQuery: $
-  })
-
   $.widget("nodered.checkboxSet", {
     _create: function () {
       var that = this;

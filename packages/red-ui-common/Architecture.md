@@ -49,6 +49,10 @@ Classes
 - `Stack` display and manage stack of items (used in node palette)
 - `Tabs` display and manage tabs (containing flows of nodes)
 
+## Using Jquery widgets
+
+See [Webpack import jQuery UI in ES6](http://code.tonytuan.org/2017/03/webpack-import-jquery-ui-in-es6-syntax.html) on how to add jQuery UI using webpack (Poi) and ES6 imports.
+
 ## Status
 
 The `/components` folder contains placeholders for *common* UI components from [red-editor](https://github.com/tecla5/red-editor/tree/master/src/new/ui/common)

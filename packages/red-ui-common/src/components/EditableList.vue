@@ -1,5 +1,6 @@
 <template>
   <div class="red-ui-editableList">
+    <h3>editableList</h3>
   </div>
 </template>
 <script>
@@ -8,7 +9,7 @@ import editableList from './controllers/editableList'
 
 export default {
   name: 'editableList',
-  created() {
+  ready() {
     log('editableList')
     let options = {}
     this.$el.querySelector('.red-ui-editableList').editableList(options)
@@ -16,4 +17,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./styles/editableList.scss"></style></style>
+<style lang="scss" src="./styles/editableList.scss"></style>

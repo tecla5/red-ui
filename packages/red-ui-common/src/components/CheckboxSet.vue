@@ -1,5 +1,6 @@
 <template>
   <div class="red-ui-checkboxSet">
+    <h3>checkboxSet</h3>
   </div>
 </template>
 <script>
@@ -9,7 +10,7 @@ import './styles/checkboxSet.scss'
 
 export default {
   name: 'checkboxSet',
-  created() {
+  ready() {
     log('checkboxSet')
     let options = {}
     this.$el.querySelector('.red-ui-checkboxSet').checkboxSet(options)

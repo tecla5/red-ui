@@ -10,8 +10,12 @@ export default {
   name: 'typedInput',
   created() {
     log('typedInput')
-    let options = {}
-    this.$el.querySelector('.red-ui-typedInput').typedInput(options)
+
+    // TODO: pass Singleton instance
+    const RED = {
+      utils: {}
+    }
+    this.$el.querySelector('.red-ui-typedInput').typedInput(RED)
   }
 }
 </script>

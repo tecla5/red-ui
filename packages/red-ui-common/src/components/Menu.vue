@@ -1,5 +1,6 @@
 <template>
   <div class="red-ui-menu">
+    <h3>menu</h3>
   </div>
 </template>
 <script>
@@ -8,7 +9,7 @@ import menu from './controllers/menu'
 
 export default {
   name: 'menu',
-  created() {
+  ready() {
     log('menu')
     let options = {}
     this.$el.querySelector('.red-ui-menu').menu(options)

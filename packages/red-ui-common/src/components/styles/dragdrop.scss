@@ -14,17 +14,24 @@
  * limitations under the License.
  **/
 
-@import 'mixins';
-.red-ui-checkboxSet {
-    width: 15px;
-    display: inline-block;
-    color: #888;
-    cursor: pointer;
-    input {
-        display: none;
-    }
-    &.disabled {
-        pointer-events: none;
-        color: #ddd;
-    }
+#dropTarget {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: rgba(0,0,0,0.1);
+    display:table;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index:100;
+}
+#dropTarget div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+#dropTarget div i {
+    font-size: 80px;
 }

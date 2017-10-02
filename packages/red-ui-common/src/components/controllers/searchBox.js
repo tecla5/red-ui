@@ -13,87 +13,94 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-(function($) {
+// jQuery
+import {
+  jQuery
+} from './jquery';
 
-    $.widget( "nodered.searchBox", {
-        _create: function() {
-            var that = this;
+(function ($) {
 
-            this.currentTimeout = null;
-            this.lastSent = "";
-            this.element.val("");
-            this.uiContainer = this.element.wrap("<div>").parent();
-            this.uiContainer.addClass("red-ui-searchBox-container");
+  $.widget("nodered.searchBox", {
+    _create: function () {
+      var that = this;
 
-            $('<i class="fa fa-search"></i>').prependTo(this.uiContainer);
-            this.clearButton = $('<a href="#"><i class="fa fa-times"></i></a>').appendTo(this.uiContainer);
-            this.clearButton.on("click",function(e) {
-                e.preventDefault();
-                that.element.val("");
-                that._change("",true);
-                that.element.focus();
-            });
+      this.currentTimeout = null;
+      this.lastSent = "";
+      this.element.val("");
+      this.uiContainer = this.element.wrap("<div>").parent();
+      this.uiContainer.addClass("red-ui-searchBox-container");
 
-            this.resultCount = $('<span>',{class:"red-ui-searchBox-resultCount hide"}).appendTo(this.uiContainer);
+      $('<i class="fa fa-search"></i>').prependTo(this.uiContainer);
+      this.clearButton = $('<a href="#"><i class="fa fa-times"></i></a>').appendTo(this.uiContainer);
+      this.clearButton.on("click", function (e) {
+        e.preventDefault();
+        that.element.val("");
+        that._change("", true);
+        that.element.focus();
+      });
 
-            this.element.val("");
-            this.element.on("keydown",function(evt) {
-                if (evt.keyCode === 27) {
-                    that.element.val("");
-                }
-            })
-            this.element.on("keyup",function(evt) {
-                that._change($(this).val());
-            });
+      this.resultCount = $('<span>', {
+        class: "red-ui-searchBox-resultCount hide"
+      }).appendTo(this.uiContainer);
 
-            this.element.on("focus",function() {
-                $("body").one("mousedown",function() {
-                    that.element.blur();
-                });
-            });
-
-        },
-        _change: function(val,instant) {
-            var fireEvent = false;
-            if (val === "") {
-                this.clearButton.hide();
-                fireEvent = true;
-            } else {
-                this.clearButton.show();
-                fireEvent = (val.length >= (this.options.minimumLength||0));
-            }
-            var current = this.element.val();
-            fireEvent = fireEvent && current !== this.lastSent;
-            if (fireEvent) {
-                if (!instant && this.options.delay > 0) {
-                    clearTimeout(this.currentTimeout);
-                    var that = this;
-                    this.currentTimeout = setTimeout(function() {
-                        that.lastSent = that.element.val();
-                        that._trigger("change");
-                    },this.options.delay);
-                } else {
-                    this._trigger("change");
-                }
-            }
-        },
-        value: function(val) {
-            if (val === undefined) {
-                return this.element.val();
-            } else {
-                this.element.val(val);
-                this._change(val);
-            }
-        },
-        count: function(val) {
-            if (val === undefined || val === null || val === "") {
-                this.resultCount.text("").hide();
-            } else {
-                this.resultCount.text(val).show();
-            }
-        },
-        change: function() {
-            this._trigger("change");
+      this.element.val("");
+      this.element.on("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          that.element.val("");
         }
-    });
+      })
+      this.element.on("keyup", function (evt) {
+        that._change($(this).val());
+      });
+
+      this.element.on("focus", function () {
+        $("body").one("mousedown", function () {
+          that.element.blur();
+        });
+      });
+
+    },
+    _change: function (val, instant) {
+      var fireEvent = false;
+      if (val === "") {
+        this.clearButton.hide();
+        fireEvent = true;
+      } else {
+        this.clearButton.show();
+        fireEvent = (val.length >= (this.options.minimumLength || 0));
+      }
+      var current = this.element.val();
+      fireEvent = fireEvent && current !== this.lastSent;
+      if (fireEvent) {
+        if (!instant && this.options.delay > 0) {
+          clearTimeout(this.currentTimeout);
+          var that = this;
+          this.currentTimeout = setTimeout(function () {
+            that.lastSent = that.element.val();
+            that._trigger("change");
+          }, this.options.delay);
+        } else {
+          this._trigger("change");
+        }
+      }
+    },
+    value: function (val) {
+      if (val === undefined) {
+        return this.element.val();
+      } else {
+        this.element.val(val);
+        this._change(val);
+      }
+    },
+    count: function (val) {
+      if (val === undefined || val === null || val === "") {
+        this.resultCount.text("").hide();
+      } else {
+        this.resultCount.text(val).show();
+      }
+    },
+    change: function () {
+      this._trigger("change");
+    }
+  });
 })(jQuery);

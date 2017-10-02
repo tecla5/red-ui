@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+
+@import 'mixins';
 .red-ui-nodeList {
     .red-ui-editableList-container {
         padding: 0;
@@ -25,7 +27,6 @@
             &:hover {
                 background: #f0f0f0;
             }
-
             i.fa-angle-right {
                 text-align: center;
                 width: 15px;
@@ -52,7 +53,6 @@
                     color: #bbb;
                 }
             }
-
         }
     }
     .red-ui-editableList-header {
