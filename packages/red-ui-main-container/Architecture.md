@@ -1,4 +1,12 @@
-# Architcture
+# Architecture: Main container
+
+The Main container contains the core of the editor, including:
+
+- Palette
+- Canvas (also known as the view or main editor)
+- Node editor
+- Sidebar
+- Workspaces
 
 ## Build
 
@@ -18,32 +26,29 @@ This will update and resolve all dependencies via lerna.
 
 See more lerna info in main [Readme](https://github.com/tecla5/red-ui/blob/master/Readme.md)
 
-## Rendering home page
-
-The standard configuration uses `index.ejs`  to render the home page (ie. Single Page Application) via [EJS](http://www.embeddedjs.com/) templating.
-
-The `home.ejs` contains the template for rendering the `node-red` home page.
-
-When developing, please substitute `home.ejs` with `index.ejs` and work from there.
-
 ## Development process
 
-Use the main components from this and other packages to assemble the full skeleton layout of the application;
+Compose from the following components:
 
-- `Header` (this package)
-- `MainContainer` in `red-ui-main-container`
+- `Palette` from `red-ui-palette`
+- `Editor` from `red-ui-node-editor`
+- `Sidebar` from `red-ui-sidebar`
+- `Workspace` from `red-ui-workspaces`
 
 This package has been configured with the following dependencies which lerna will resolve:
 
 ```txt
   "dependencies": {
     ...
-    "@tecla5/red-ui-header": "x",
-    "@tecla5/red-ui-main-container": "x",
+    "@tecla5/red-ui-sidebar": "x",
+    "@tecla5/red-ui-canvas": "x",
+    "@tecla5/red-ui-palette": "x"
+    "@tecla5/red-ui-workspaces": "x"
     ...
   }
 ```
 
 For starters, each of the top level components should be empty except for a placeholder text with the name of the component.
 
-Compose using the `Header` and `MainContainer`
+Add the `Palette`, `Sidebar` and finally the `Canvas` (main editor)
+

@@ -1,16 +1,16 @@
 {
   "private": true,
-  "name": "@tecla5/red-ui-app",
-  "productName": "red-ui-app",
-  "description": "node-red full app",
+  "name": "@tecla5/red-ui-header",
+  "productName": "red-ui-header",
+  "description": "node-red app header",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "poi",
     "build": "poi build",
     "lerna:update": "npm run lerna:clean && npm run lerna:bootstrap",
-    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-app",
-    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-app",
+    "lerna:bootstrap": "lerna bootstrap --scope @tecla5/red-ui-header",
+    "lerna:clean": "rm -f package.json.lock 2> /dev/null && echo y | lerna clean --scope @tecla5/red-ui-header",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
     "test": "cross-env NODE_ENV=test ava"
@@ -38,9 +38,7 @@
   "dependencies": {
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
-    "promise-polyfill": "^6.0.2",
-    "@tecla5/red-ui-header": "x",
-    "@tecla5/red-ui-main-container": "x"
+    "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
     "ava": "^0.19.1",

@@ -10,8 +10,8 @@
 
 <script>
 const log = console.log
-import Header from './Header'
-import MainContainer from './MainContainer'
+import Header from '@tecla5/red-ui-header/src/components/Header'
+import MainContainer from '@tecla5/red-ui-main-container/src/components/MainContainer'
 import Notifications from './Notifications'
 // import Notifications from 'red-ui-notifications/components/Notifications'
 import DropTarget from './DropTarget'
