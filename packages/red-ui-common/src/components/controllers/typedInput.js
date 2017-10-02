@@ -16,8 +16,14 @@
 import {
   jQuery
 } from './jquery';
+import {
+  Validators
+} from './utils/validators'
+
 
 export default function factory(RED) {
+  const validators = new Validators(RED)
+
   (function ($) {
     var allOptions = {
       msg: {
