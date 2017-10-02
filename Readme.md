@@ -13,9 +13,11 @@ This [lerna](https://lernajs.io/) project contains the following packages:
 - `red-ui-app` Full application
 - `red-ui-canvas` Canvas for flows drawing, using [D3](https://d3js.org/)
 - `red-ui-common` Common UI base components used as building blocks
+- `red-ui-header` Header (top bar)
 - `red-ui-library` Manage libraries of flows
 - `red-ui-node-diff` Node difference visualizer
 - `red-ui-node-editor` Node editor, form with fields for node properties
+- `red-ui-main-container` Main container, containing palette, canvas, sidebar, workspaces
 - `red-ui-palette` Palette of available nodes to be used on canvas
 - `red-ui-search` Search for matching nodes
 - `red-ui-settings` User settings management
