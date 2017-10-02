@@ -28,15 +28,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-.button-group-vertical {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.button-group:not(:last-child) {
-  margin-right: 10px;
-}
-
 /**
  * Copyright JS Foundation and other contributors, http://js.foundation
  *
@@ -52,6 +43,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+.button-group-vertical {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button-group:not(:last-child) {
+  margin-right: 10px;
+}
+
 /**
  * Copyright JS Foundation and other contributors, http://js.foundation
  *

@@ -14,7 +14,9 @@
  * limitations under the License.
  **/
 
-
+@import 'mixins';
+@import 'colors';
+@import 'ace';
 #editor-stack {
     position: absolute;
     margin: 0;
@@ -24,11 +26,11 @@
     width: 0;
     z-index: 5;
 }
+
 .editor-tray {
-    position:absolute;
+    position: absolute;
     margin: 0;
-    top: 0;
-    //min-width: 500px;
+    top: 0; //min-width: 500px;
     width: auto;
     right: -1000px;
     bottom: 0;
@@ -37,26 +39,33 @@
     border-bottom: 1px solid $primary-border-color;
     box-sizing: content-box;
 }
+
 .editor-tray.open {
     right: 0;
 }
+
 .editor-tray-body-wrapper {
     width: 100%;
     box-sizing: border-box;
     overflow: auto;
 }
+
 .editor-tray-body {
     position: relative;
     box-sizing: border-box;
     padding: 0.1px; // prevent margin collapsing
-    .dialog-form,#dialog-form, #node-config-dialog-edit-form {
+    .dialog-form,
+    #dialog-form,
+    #node-config-dialog-edit-form {
         margin: 20px;
         height: calc(100% - 40px);
     }
 }
+
 .editor-tray-content {
     overflow: auto;
 }
+
 .editor-tray-header {
     @include disable-selection;
     position: relative;
@@ -74,19 +83,16 @@
 .editor-tray-footer {
     @include component-footer;
     height: 35px;
-
     button {
         @include editor-button;
         padding: 3px 7px;
         font-size: 11px;
     }
-
 }
 
 .editor-tray-toolbar {
     text-align: right;
     padding: 6px;
-
     button {
         @include editor-button;
         &.toggle {
@@ -99,29 +105,27 @@
     border-bottom: 1px solid $secondary-border-color;
     padding: 8px;
 }
+
 .editor-tray-breadcrumbs {
     list-style-type: none;
     margin: 0;
-    padding:0;
-
+    padding: 0;
     li {
         display: inline-block;
-        padding:0;
-        margin:0;
-
+        padding: 0;
+        margin: 0;
         &:not(:last-child) {
             color: $editor-button-color;
             font-weight: normal;
-
             &:after {
                 display: inline-block;
                 content: '>';
                 margin: 0 5px;
             }
-
         }
     }
 }
+
 .editor-tray-resize-handle {
     position: absolute;
     top: 0px;
@@ -131,13 +135,13 @@
     background: $background-color url(images/grip.png) no-repeat 50% 50%;
     cursor: col-resize;
     border-left: 1px solid $primary-border-color;
-    box-shadow: -1px 0 6px rgba(0,0,0,0.1);
-
+    box-shadow: -1px 0 6px rgba(0, 0, 0, 0.1);
     &.editor-tray-resize-maximised {
         background: $background-color;
         cursor: default;
     }
 }
+
 .editor-tray-resize-button {
     @include workspace-button;
     display: block;
@@ -149,18 +153,24 @@
     background: $background-color;
     color: $workspace-button-color;
 }
-#palette-shade, #editor-shade, #header-shade, #sidebar-shade  {
+
+#palette-shade,
+#editor-shade,
+#header-shade,
+#sidebar-shade {
     @include shade;
     z-index: 2;
 }
-#sidebar-shade  {
+
+#sidebar-shade {
     left: -8px;
     top: -1px;
     bottom: -1px;
 }
 
-
-.dialog-form,#dialog-form, #node-config-dialog-edit-form {
+.dialog-form,
+#dialog-form,
+#node-config-dialog-edit-form {
     height: 100%;
 }
 
@@ -171,14 +181,17 @@
 .form-row {
     clear: both;
     color: $form-text-color;
-    margin-bottom:12px;
+    margin-bottom: 12px;
 }
+
 .form-row label {
     display: inline-block;
     width: 100px;
 }
-.form-row input, .form-row div[contenteditable="true"] {
-    width:70%;
+
+.form-row input,
+.form-row div[contenteditable="true"] {
+    width: 70%;
 }
 
 .form-tips {
@@ -188,17 +201,19 @@
     border: 1px solid $secondary-border-color;
     max-width: 450px;
 }
+
 .form-tips code {
     border: none;
     padding: auto;
 }
+
 .form-tips a {
     text-decoration: underline;
 }
 
 .node-text-editor {
-    border:1px solid #ccc;
-    border-radius:5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     overflow: hidden;
     font-size: 14px !important;
     font-family: Menlo, Consolas, 'DejaVu Sans Mono', Courier, monospace !important;
@@ -216,7 +231,6 @@
     }
 }
 
-
 .editor-button-small {
     height: 20px;
     line-height: 18px;
@@ -231,27 +245,30 @@
     font-size: 12px !important;
     line-height: 35px;
 }
+
 #node-config-dialog-scope-warning {
     display: inline-block;
     margin-right: 5px;
     color: #AD1625;
     vertical-align: middle;
 }
+
 #node-config-dialog-scope {
     margin: 1px 0 0 0;
     padding: 0;
     height: 22px;
     width: 200px;
-
 }
+
 #node-config-dialog-user-count {
     vertical-align: middle;
-    display:inline-block;
+    display: inline-block;
     margin-right: 20px;
-    float:left;
+    float: left;
     font-size: 12px;
     line-height: 35px;
 }
+
 .node-input-expression-editor #dialog-form {
     margin: 0;
     height: 100%;
@@ -264,6 +281,7 @@
         }
     }
 }
+
 .node-input-expression-tab-content {
     position: relative;
     padding: 0 20px;
@@ -272,22 +290,25 @@
 #node-input-expression-help {
     position: absolute;
     top: 35px;
-    left:0;
+    left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
     padding: 0 20px;
     overflow: auto;
     box-sizing: border-box;
 }
+
 #node-input-expression-panel-info {
-    & > .form-row {
+    &>.form-row {
         margin: 0;
-        & > div:first-child {
+        &>div:first-child {
             margin-top: 10px;
         }
     }
 }
-.node-input-expression-legacy, .node-input-buffer-type {
+
+.node-input-expression-legacy,
+.node-input-buffer-type {
     font-size: 0.8em;
     float: left;
     cursor: pointer;
@@ -298,6 +319,7 @@
         border-color: $form-input-border-color;
     }
 }
+
 .node-input-buffer-type {
     float: none;
     text-align: right;
@@ -307,6 +329,7 @@
     position: absolute;
     top: -3000px;
 }
+
 .node-label-form-row {
     margin: 5px 0;
     label {
@@ -321,6 +344,7 @@
         width: calc(100% - 100px);
     }
 }
+
 .node-label-form-none {
     span {
         padding-left: 50px;
@@ -332,7 +356,6 @@
 .ace_read-only {
     background: #eee !important;
     .ace_cursor {
-       color: transparent !important;
+        color: transparent !important;
     }
-
 }

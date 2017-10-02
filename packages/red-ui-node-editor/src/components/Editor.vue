@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" src="./styles/editor.scss>
 
 </style>

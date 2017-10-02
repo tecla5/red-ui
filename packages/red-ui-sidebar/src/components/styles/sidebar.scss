@@ -14,6 +14,7 @@
  * limitations under the License.
  **/
 
+@import 'mixins';
 #sidebar {
     position: absolute;
     top: 0px;
@@ -45,17 +46,28 @@
     position: absolute;
     top: 5px;
     right: 315px;
-    bottom:10px;
+    bottom: 10px;
     width: 7px;
     z-index: 11;
     background: $background-color url(images/grip.png) no-repeat 50% 50%;
     cursor: col-resize;
 }
 
-.sidebar-closed > #sidebar { display: none; }
-.sidebar-closed > #sidebar-separator { right: 0px !important; }
-.sidebar-closed > #workspace { right: 7px !important; }
-.sidebar-closed > #editor-stack { right: 8px !important; }
+.sidebar-closed>#sidebar {
+    display: none;
+}
+
+.sidebar-closed>#sidebar-separator {
+    right: 0px !important;
+}
+
+.sidebar-closed>#workspace {
+    right: 7px !important;
+}
+
+.sidebar-closed>#editor-stack {
+    right: 8px !important;
+}
 
 #sidebar .button {
     @include workspace-button;
@@ -81,21 +93,25 @@
 .sidebar-footer-button {
     @include component-footer-button;
 }
+
 .sidebar-footer-button-toggle {
     @include component-footer-button-toggle;
 }
+
 .sidebar-header-button {
     @include workspace-button;
     font-size: 13px;
     line-height: 13px;
     padding: 5px 8px;
 }
+
 .sidebar-header-button-toggle {
     @include workspace-button-toggle;
     font-size: 13px;
     line-height: 13px;
     padding: 5px 8px;
 }
+
 .sidebar-header-button:not(:first-child) {
     border-left: none;
 }
