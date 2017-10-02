@@ -49,6 +49,9 @@ import 'font-awesome/css/font-awesome.min.css'
 // marked
 import 'marked/lib/marked'
 
+// include styles (requires sass-loader in poi-config)
+// import './styles/app.scss'
+
 // import api from '@tecla5/red-api'
 // import runtime from '@tecla5/red-runtime'
 
