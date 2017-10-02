@@ -23,7 +23,9 @@ import data from './data/default-context.js'
 
 export default {
   name: 'header',
-  data,
+  data: () => {
+    return data
+  },
   created() {
     log('header')
   }
