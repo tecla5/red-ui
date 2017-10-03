@@ -21,6 +21,7 @@ export class Panel {
   constructor(options) {
     var container = options.container || $("#" + options.id);
     var children = container.children();
+
     if (children.length !== 2) {
       throw new Error("Container must have exactly two children");
     }

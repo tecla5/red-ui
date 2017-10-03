@@ -3,13 +3,22 @@
   </div>
 </template>
 <script>
+const log = console.log
+import { UserSettings } from './controllers/userSettings'
+
+const RED = {
+  actions: {}
+}
+
 export default {
   name: 'settings',
-  created() {
+  mounted() {
+    log('settings')
+    new UserSettings(RED)
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" src="./styles/userSettings.scss">
 
 </style>

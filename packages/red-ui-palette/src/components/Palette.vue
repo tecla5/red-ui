@@ -19,14 +19,16 @@
 </template>
 <script>
 const log = console.log
-import PaletteEditor from './PaletteEditor'
+import { Palette } from './Palette'
+import { PaletteEditor } from './PaletteEditor'
 export default {
   name: 'palette',
   components: {
     'red-palette-editor': PaletteEditor
   },
-  created() {
-    log('palette')
+  mounted() {
+    log('editor')
+    new Palette()
   }
 }
 </script>

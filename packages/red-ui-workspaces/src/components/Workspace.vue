@@ -19,12 +19,22 @@
 </template>
 <script>
 import WorkspaceToolbar from './WorkspaceToolbar'
+import { Workspaces } from './controllers/workspaces'
+const events = {}
+const actions = {}
+
+const RED = {
+  events,
+  actions
+}
+
 export default {
   name: 'workspace',
   components: {
     'red-workspace-toolbar': WorkspaceToolbar
   },
-  created() {
+  mounted() {
+    new Workspaces(RED)
   }
 }
 </script>

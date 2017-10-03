@@ -3,9 +3,13 @@
   </div>
 </template>
 <script>
+const log = console.log
+import { Diff } from './controllers/diff'
 export default {
   name: 'diff',
-  created() {
+  mounted() {
+    log('diff')
+    new Diff()
   }
 }
 </script>

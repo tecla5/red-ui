@@ -5,7 +5,9 @@
 <script>
 export default {
   name: 'search',
-  created() {
+  mounted() {
+    log('search')
+    new Search()
   }
 }
 </script>
