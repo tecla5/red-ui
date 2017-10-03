@@ -1,18 +1,20 @@
 <template>
-  <div class="red-ui-menu">
+  <div class="red-ui-menu" id="my-menu">
     <h3>menu</h3>
   </div>
 </template>
 <script>
 const log = console.log
-import menu from './controllers/menu'
+import { Menu } from './controllers/menu'
 
 export default {
   name: 'menu',
-  ready() {
+  mounted() {
     log('menu')
-    let options = {}
-    this.$el.querySelector('.red-ui-menu').menu(options)
+    let options = {
+      id: 'my-menu'
+    }
+    new Menu(options)
   }
 }
 </script>

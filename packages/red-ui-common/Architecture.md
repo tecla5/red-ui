@@ -53,6 +53,12 @@ Classes
 
 See [Webpack import jQuery UI in ES6](http://code.tonytuan.org/2017/03/webpack-import-jquery-ui-in-es6-syntax.html) on how to add jQuery UI using webpack (Poi) and ES6 imports.
 
+## Font Awesome
+
+The widgets use Font Awesome classes, such as `fa fa-sort-desc` etc. The hosting app needs to import font-awesome for these classes to take effect.
+
+[How to use font-awesome in Vue project](https://www.reddit.com/r/vuejs/comments/6pg1yp/how_to_use_fontawesome_icons_in_your_vue_project/?st=j8bccc15&sh=fd8c0374)
+
 ## Status
 
 The `/components` folder contains placeholders for *common* UI components from [red-editor](https://github.com/tecla5/red-editor/tree/master/src/new/ui/common)

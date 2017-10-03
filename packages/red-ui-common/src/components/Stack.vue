@@ -1,18 +1,19 @@
 <template>
   <div class="red-ui-stack">
-    <h3>stack</h3>
+
   </div>
 </template>
 <script>
+// <h3>stack</h3>
 const log = console.log
-import stack from './controllers/stack'
+import { Stack } from './controllers/stack'
 
 export default {
   name: 'stack',
-  ready() {
+  mounted() {
     log('stack')
     let options = {}
-    this.$el.querySelector('.red-ui-stack').stack(options)
+    new Stack(options)
   }
 }
 </script>

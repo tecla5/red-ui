@@ -14,8 +14,8 @@
  * limitations under the License.
  **/
 import {
-  jQuery
-} from './jquery';
+  default as $
+} from 'jquery';
 
 export class Stack {
   constructor(options) {

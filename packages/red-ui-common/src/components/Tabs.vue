@@ -1,19 +1,21 @@
 <template>
-  <div class="red-ui-tabs">
+  <div class="red-ui-tabs" id="my-tabs">
     <h3>tabs</h3>
   </div>
 </template>
 <script>
 const log = console.log
-import tabs from './controllers/tabs'
+import { Tabs } from './controllers/tabs'
 import './styles/tabs.scss'
 
 export default {
   name: 'tabs',
-  ready() {
+  mounted() {
     log('tabs')
-    let options = {}
-    this.$el.querySelector('.red-ui-tabs').tabs(options)
+    let options = {
+      id: 'my-tabs'
+    }
+    new Tabs(options)
   }
 }
 </script>

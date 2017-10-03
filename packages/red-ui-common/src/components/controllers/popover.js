@@ -14,8 +14,8 @@
  * limitations under the License.
  **/
 import {
-  jQuery
-} from './jquery';
+  default as $
+} from 'jquery';
 
 var deltaSizes = {
   "default": {

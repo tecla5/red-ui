@@ -33,11 +33,13 @@ function factory(RED) {
     RED,
     Validators
   });
-  let validators = new Validators(RED);
-  console.log('create widget');
+  new Validators(RED);
+  console.log('create typedInput widget', {
+    RED
+  });
 
   (function ($) {
-    console.log('creating widget...', RED)
+    console.log('creating typedInput widget...', RED)
 
     var allOptions = {
       msg: {

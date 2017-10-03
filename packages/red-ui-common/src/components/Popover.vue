@@ -1,19 +1,21 @@
 <template>
-  <div class="red-ui-popover">
+  <div class="red-ui-popover" id="popover">
     <h3>popover</h3>
   </div>
 </template>
 <script>
 const log = console.log
-import popover from './controllers/popover'
+import { Popover } from './controllers/popover'
 import './styles/popover.scss'
 
 export default {
   name: 'popover',
-  ready() {
+  mounted() {
     log('popover')
-    let options = {}
-    this.$el.querySelector('.red-ui-popover').popover(options)
+    let options = {
+      id: 'popover'
+    }
+    new Popover(options)
   }
 }
 </script>

@@ -36,8 +36,9 @@
     ]
   },
   "dependencies": {
-    "jquery-ui-dist": "^1.12.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2"

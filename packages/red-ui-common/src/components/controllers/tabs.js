@@ -14,8 +14,8 @@
  * limitations under the License.
  **/
 import {
-  jQuery
-} from './jquery';
+  default as $
+} from 'jquery';
 
 export class Tabs {
 
@@ -27,6 +27,10 @@ export class Tabs {
     var ul = options.element || $("#" + options.id);
     var wrapper = ul.wrap("<div>").parent();
     var scrollContainer = ul.wrap("<div>").parent();
+
+    // configure aliases
+    let onTabClick = this.onTabClick
+    let onTabDblClick = this.onTabDblClick
 
     wrapper.addClass("red-ui-tabs");
     if (options.vertical) {

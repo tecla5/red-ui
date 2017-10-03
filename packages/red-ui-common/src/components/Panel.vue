@@ -1,18 +1,20 @@
 <template>
-  <div class="red-ui-panel">
-    <h3>panel</h3>
+  <div class="red-ui-panel" id="my-panel">
   </div>
 </template>
 <script>
+// <h3>panel</h3>
 const log = console.log
-import panel from './controllers/panel'
+import { Panel } from './controllers/panel'
 
 export default {
   name: 'panel',
-  ready() {
+  mounted() {
     log('panel')
-    let options = {}
-    this.$el.querySelector('.red-ui-panel').panel(options)
+    let options = {
+      id: 'my-panel'
+    }
+    new Panel(options)
   }
 }
 </script>

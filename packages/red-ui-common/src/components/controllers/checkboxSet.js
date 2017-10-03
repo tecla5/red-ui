@@ -25,119 +25,129 @@ import {
   jQuery
 } from './jquery';
 
-export default (function ($) {
-  $.widget("nodered.checkboxSet", {
-    _create: function () {
-      var that = this;
-      this.uiElement = this.element.wrap("<span>").parent();
-      this.uiElement.addClass("red-ui-checkboxSet");
-      if (this.options.parent) {
-        this.parent = this.options.parent;
-        this.parent.checkboxSet('addChild', this.element);
-      }
-      this.children = [];
-      this.partialFlag = false;
-      this.stateValue = 0;
-      var initialState = this.element.prop('checked');
-      this.options = [
-        $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-square-o"></i></span>').appendTo(this.uiElement),
-        $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-check-square-o"></i></span>').appendTo(this.uiElement),
-        $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-minus-square-o"></i></span>').appendTo(this.uiElement)
-      ];
-      if (initialState) {
-        this.options[1].show();
-      } else {
-        this.options[0].show();
-      }
+const log = console.log
+export default factory
 
-      this.element.change(function () {
-        if (this.checked) {
-          that.options[0].hide();
-          that.options[1].show();
-          that.options[2].hide();
-        } else {
-          that.options[1].hide();
-          that.options[0].show();
-          that.options[2].hide();
+function factory(RED) {
+  // https://stackoverflow.com/questions/31013221/typeerror-console-log-is-not-a-function
+  log('create checkboxSet widget', {
+    RED
+  });
+
+  (function ($) {
+    $.widget("nodered.checkboxSet", {
+      _create: function () {
+        var that = this;
+        this.uiElement = this.element.wrap("<span>").parent();
+        this.uiElement.addClass("red-ui-checkboxSet");
+        if (this.options.parent) {
+          this.parent = this.options.parent;
+          this.parent.checkboxSet('addChild', this.element);
         }
-        var isChecked = this.checked;
-        that.children.forEach(function (child) {
-          child.checkboxSet('state', isChecked, false, true);
-        })
-      })
-      this.uiElement.click(function (e) {
-        e.stopPropagation();
-        // state returns null for a partial state. Clicking on that should
-        // result in false.
-        that.state((that.state() === false) ? true : false);
-      })
-      if (this.parent) {
-        this.parent.checkboxSet('updateChild', this);
-      }
-    },
-    _destroy: function () {
-      if (this.parent) {
-        this.parent.checkboxSet('removeChild', this.element);
-      }
-    },
-    addChild: function (child) {
-      var that = this;
-      this.children.push(child);
-    },
-    removeChild: function (child) {
-      var index = this.children.indexOf(child);
-      if (index > -1) {
-        this.children.splice(index, 1);
-      }
-    },
-    updateChild: function (child) {
-      var checkedCount = 0;
-      this.children.forEach(function (c, i) {
-        if (c.checkboxSet('state') === true) {
-          checkedCount++;
-        }
-      });
-      if (checkedCount === 0) {
-
-        this.state(false, true);
-      } else if (checkedCount === this.children.length) {
-        this.state(true, true);
-      } else {
-        this.state(null, true);
-      }
-    },
-    disable: function () {
-      this.uiElement.addClass('disabled');
-    },
-    state: function (state, suppressEvent, suppressParentUpdate) {
-
-      if (arguments.length === 0) {
-        return this.partialFlag ? null : this.element.is(":checked");
-      } else {
-        this.partialFlag = (state === null);
-        var trueState = this.partialFlag || state;
-        this.element.prop('checked', trueState);
-        if (state === true) {
-          this.options[0].hide();
+        this.children = [];
+        this.partialFlag = false;
+        this.stateValue = 0;
+        var initialState = this.element.prop('checked');
+        this.options = [
+          $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-square-o"></i></span>').appendTo(this.uiElement),
+          $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-check-square-o"></i></span>').appendTo(this.uiElement),
+          $('<span class="red-ui-checkboxSet-option hide"><i class="fa fa-minus-square-o"></i></span>').appendTo(this.uiElement)
+        ];
+        if (initialState) {
           this.options[1].show();
-          this.options[2].hide();
-        } else if (state === false) {
-          this.options[2].hide();
-          this.options[1].hide();
+        } else {
           this.options[0].show();
-        } else if (state === null) {
-          this.options[0].hide();
-          this.options[1].hide();
-          this.options[2].show();
         }
-        if (!suppressEvent) {
-          this.element.trigger('change', null);
-        }
-        if (!suppressParentUpdate && this.parent) {
+
+        this.element.change(function () {
+          if (this.checked) {
+            that.options[0].hide();
+            that.options[1].show();
+            that.options[2].hide();
+          } else {
+            that.options[1].hide();
+            that.options[0].show();
+            that.options[2].hide();
+          }
+          var isChecked = this.checked;
+          that.children.forEach(function (child) {
+            child.checkboxSet('state', isChecked, false, true);
+          })
+        })
+        this.uiElement.click(function (e) {
+          e.stopPropagation();
+          // state returns null for a partial state. Clicking on that should
+          // result in false.
+          that.state((that.state() === false) ? true : false);
+        })
+        if (this.parent) {
           this.parent.checkboxSet('updateChild', this);
         }
-      }
-    }
-  })
+      },
+      _destroy: function () {
+        if (this.parent) {
+          this.parent.checkboxSet('removeChild', this.element);
+        }
+      },
+      addChild: function (child) {
+        var that = this;
+        this.children.push(child);
+      },
+      removeChild: function (child) {
+        var index = this.children.indexOf(child);
+        if (index > -1) {
+          this.children.splice(index, 1);
+        }
+      },
+      updateChild: function (child) {
+        var checkedCount = 0;
+        this.children.forEach(function (c, i) {
+          if (c.checkboxSet('state') === true) {
+            checkedCount++;
+          }
+        });
+        if (checkedCount === 0) {
 
-})(jQuery);
+          this.state(false, true);
+        } else if (checkedCount === this.children.length) {
+          this.state(true, true);
+        } else {
+          this.state(null, true);
+        }
+      },
+      disable: function () {
+        this.uiElement.addClass('disabled');
+      },
+      state: function (state, suppressEvent, suppressParentUpdate) {
+
+        if (arguments.length === 0) {
+          return this.partialFlag ? null : this.element.is(":checked");
+        } else {
+          this.partialFlag = (state === null);
+          var trueState = this.partialFlag || state;
+          this.element.prop('checked', trueState);
+          if (state === true) {
+            this.options[0].hide();
+            this.options[1].show();
+            this.options[2].hide();
+          } else if (state === false) {
+            this.options[2].hide();
+            this.options[1].hide();
+            this.options[0].show();
+          } else if (state === null) {
+            this.options[0].hide();
+            this.options[1].hide();
+            this.options[2].show();
+          }
+          if (!suppressEvent) {
+            this.element.trigger('change', null);
+          }
+          if (!suppressParentUpdate && this.parent) {
+            this.parent.checkboxSet('updateChild', this);
+          }
+        }
+      }
+    })
+
+  })(jQuery);
+}

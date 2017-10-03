@@ -1,18 +1,26 @@
 <template>
-  <div class="red-ui-editableList">
-    <h3>editableList</h3>
+  <div class="red-ui-editableList" ref="editableList">
+
   </div>
 </template>
 <script>
+// <h3>editableList</h3>
 const log = console.log
-import editableList from './controllers/editableList'
+import { EditableList } from './controllers/editableList'
+import { wrap } from './util'
+
+// TODO: pass Singleton instance
+const RED = {
+  utils: {}
+}
+editableList(RED)
 
 export default {
   name: 'editableList',
-  ready() {
+  mounted() {
     log('editableList')
     let options = {}
-    this.$el.querySelector('.red-ui-editableList').editableList(options)
+    wrap(this, 'editableList', options)
   }
 }
 </script>

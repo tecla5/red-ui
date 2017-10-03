@@ -7,13 +7,16 @@
 const log = console.log
 import checkboxSet from './controllers/checkboxSet'
 import './styles/checkboxSet.scss'
+import { wrap } from './util'
+
+checkboxSet()
 
 export default {
   name: 'checkboxSet',
-  ready() {
+  mounted() {
     log('checkboxSet')
     let options = {}
-    this.$el.querySelector('.red-ui-checkboxSet').checkboxSet(options)
+    wrap(this, 'checkboxSet', options)
   }
 }
 </script>

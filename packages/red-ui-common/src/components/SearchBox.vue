@@ -1,19 +1,22 @@
 <template>
-  <div class="red-ui-searchBox">
-    <h3>searchBox</h3>
+  <div class="red-ui-searchBox" ref="searchBox">
   </div>
 </template>
 <script>
+// <h3>searchBox</h3>
 const log = console.log
 import searchBox from './controllers/searchBox'
 import './styles/searchBox.scss'
+import { wrap } from './util'
+
+searchBox()
 
 export default {
   name: 'searchBox',
-  ready() {
+  mounted() {
     log('searchBox')
-    let options = {}
-    this.$el.querySelector('.red-ui-searchBox').searchBox(options)
+    const options = {}
+    wrap(this, 'searchBox', options)
   }
 }
 </script>

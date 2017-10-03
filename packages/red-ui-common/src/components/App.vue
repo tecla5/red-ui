@@ -5,10 +5,17 @@
     <red-menu />
     <red-panel />
     <red-popover />
-    <red-searchbox />
+
     <red-stack />
     <red-tabs />
-    <red-typed-input />
+    <p>Searchbox:
+      <red-searchbox />
+    </p>
+
+    <p>TypedInput:
+      <red-typed-input />
+    </p>
+
   </div>
 </template>
 
@@ -24,6 +31,10 @@ import Stack from './Stack'
 import Tabs from './Tabs'
 import TypedInput from './TypedInput'
 // ...
+
+// font-awesome
+// import 'font-awesome/css/font-awesome.min.css'
+import 'font-awesome/css/font-awesome.css'
 
 export default {
   name: 'app',
