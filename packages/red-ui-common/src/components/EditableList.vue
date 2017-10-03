@@ -6,7 +6,7 @@
 <script>
 // <h3>editableList</h3>
 const log = console.log
-import { EditableList } from './controllers/editableList'
+import editableList from './controllers/editableList'
 import { wrap } from './util'
 
 // TODO: pass Singleton instance

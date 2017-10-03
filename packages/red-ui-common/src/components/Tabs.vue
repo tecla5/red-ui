@@ -1,6 +1,9 @@
 <template>
   <div class="red-ui-tabs" id="my-tabs">
-    <h3>tabs</h3>
+    <ul>
+      <li class="red-ui-tab">hello</li>
+      <li class="red-ui-tab">bye</li>
+    </ul>
   </div>
 </template>
 <script>

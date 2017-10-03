@@ -12,7 +12,10 @@ export default {
   mounted() {
     log('menu')
     let options = {
-      id: 'my-menu'
+      id: 'my-menu',
+      options: {
+
+      }
     }
     new Menu(options)
   }

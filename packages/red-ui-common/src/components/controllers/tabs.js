@@ -20,6 +20,8 @@ import {
 export class Tabs {
 
   constructor(options) {
+    this.options = options
+
     var tabs = {};
     var currentTabWidth;
     var currentActiveTabWidth = 0;
@@ -28,9 +30,16 @@ export class Tabs {
     var wrapper = ul.wrap("<div>").parent();
     var scrollContainer = ul.wrap("<div>").parent();
 
+    this.tabs = tabs
+    this.currentActiveTabWidth = currentActiveTabWidth
+    this.ul = ul
+    this.wrapper = wrapper
+    this.scrollContainer = scrollContainer
+
     // configure aliases
-    let onTabClick = this.onTabClick
-    let onTabDblClick = this.onTabDblClick
+    let onTabClick = this.onTabClick.bind(this)
+    let onTabDblClick = this.onTabDblClick.bind(this)
+    let updateTabWidths = this.updateTabWidths.bind(this)
 
     wrapper.addClass("red-ui-tabs");
     if (options.vertical) {
@@ -104,6 +113,8 @@ export class Tabs {
 
 
   onTabClick() {
+    let options = this.options
+
     if (options.onclick) {
       options.onclick(tabs[$(this).attr('href').slice(1)]);
     }
@@ -130,6 +141,8 @@ export class Tabs {
   }
 
   onTabDblClick() {
+    let options = this.options
+
     if (options.ondblclick) {
       options.ondblclick(tabs[$(this).attr('href').slice(1)]);
     }
@@ -137,6 +150,10 @@ export class Tabs {
   }
 
   activateTab(link) {
+    let updateTabWidths = this.updateTabWidths
+    let ul = this.ul
+    let options = this.options
+
     if (typeof link === "string") {
       link = ul.find("a[href='#" + link + "']");
     }
@@ -188,6 +205,10 @@ export class Tabs {
   }
 
   updateTabWidths() {
+    let options = this.options
+    let ul = this.ul
+    let wrapper = this.wrapper
+
     if (options.vertical) {
       return;
     }
@@ -261,6 +282,8 @@ export class Tabs {
   }
 
   addTab(tab) {
+    let updateTabWidths = this.updateTabWidths
+
     tabs[tab.id] = tab;
     var li = $("<li/>", {
       class: "red-ui-tab"

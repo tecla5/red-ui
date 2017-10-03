@@ -1,5 +1,7 @@
 <template>
   <div class="red-ui-panel" id="my-panel">
+    <div class="title">Panel title</div>
+    <div class="content">Panel content</div>
   </div>
 </template>
 <script>

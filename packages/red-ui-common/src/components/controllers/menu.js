@@ -17,7 +17,7 @@ import {
   default as $
 } from 'jquery';
 
-class Menu {
+export class Menu {
   constructor(options) {
     this.menuItems = {};
     var menuParent = $("#" + options.id);
