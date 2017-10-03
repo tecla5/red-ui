@@ -29,6 +29,10 @@ This [lerna](https://lernajs.io/) project contains the following packages:
 Each package is a separate node module and can be published as such.
 Lerna is used to manage the module workflow, link package dependencies etc.
 
+## Tracking development
+
+In each project, please see the `Changelog`, `TODO` and `Issues` document if available to see the status.
+
 ## Development Strategy
 
 The goal is to wrap each of the node-red components in Vue components, then gradually remove the jQuery logic to use Vue data binding logic instead.

@@ -20,11 +20,13 @@
 <script>
 import WorkspaceToolbar from './WorkspaceToolbar'
 import { Workspaces } from './controllers/workspaces'
+const log = console.log
+
 const events = {}
 const actions = {}
 const menu = {}
 
-const RED = {
+let RED = {
   events,
   actions,
   menu

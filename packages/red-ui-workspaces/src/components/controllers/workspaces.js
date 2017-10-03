@@ -19,18 +19,38 @@
 import {
   Context
 } from './context'
+import {
+  Tabs
+} from '@tecla5/red-ui-common/src/components/controllers/tabs'
 
 export class Workspaces extends Context {
+  createTabs(options) {
+    return new Tabs(options)
+  }
+
   constructor(ctx) {
     super(ctx)
+    let RED = ctx
     this.activeWorkspace = 0;
     this.workspaceIndex = 0;
+
+    // FIX
     this.workspace_tabs = null; // instances of WorkspaceTab
 
     let workspace_tabs = this.workspace_tabs
     let activeWorkspace = this.activeWorkspace
 
+    let addWorkspace = this.addWorkspace.bind(this)
+    let editWorkspace = this.editWorkspace.bind(this)
+    let removeWorkspace = this.removeWorkspace.bind(this)
+
+    // FIX! should add to this.workspace_tabs
     this.createWorkspaceTabs();
+
+    if (!typeof workspace_tabs === 'object') {
+      throw new Error('createWorkspaceTabs needs to create workspace_tabs')
+    }
+
     RED.events.on("sidebar:resize", workspace_tabs.resize);
 
     RED.actions.add("core:show-next-tab", workspace_tabs.nextTab);
@@ -51,6 +71,9 @@ export class Workspaces extends Context {
   }
 
   addWorkspace(ws, skipHistoryEntry) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     if (ws) {
       workspace_tabs.addTab(ws);
@@ -89,6 +112,9 @@ export class Workspaces extends Context {
   }
 
   deleteWorkspace(ws) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     if (workspace_tabs.count() == 1) {
       return;
@@ -104,6 +130,9 @@ export class Workspaces extends Context {
   }
 
   showRenameWorkspaceDialog(id) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     var workspace = RED.nodes.workspace(id);
     RED.view.state(RED.state.EDITING);
@@ -265,9 +294,14 @@ export class Workspaces extends Context {
 
 
   createWorkspaceTabs() {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
+
     // see ui/common/tabs
-    workspace_tabs = RED.tabs.create({
+    // fix
+    workspace_tabs = RED.tabs = this.createTabs({
       id: "workspace-tabs",
       onchange: function (tab) {
         var event = {
@@ -323,6 +357,9 @@ export class Workspaces extends Context {
   }
 
   removeWorkspace(ws) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     if (!ws) {
       this.deleteWorkspace(RED.nodes.workspace(activeWorkspace));
@@ -334,6 +371,9 @@ export class Workspaces extends Context {
   }
 
   setWorkspaceOrder(order) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     RED.nodes.setWorkspaceOrder(order.filter(function (id) {
       return RED.nodes.workspace(id) !== undefined;
@@ -354,6 +394,9 @@ export class Workspaces extends Context {
   }
 
   show(id) {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     if (!workspace_tabs.contains(id)) {
       var sf = RED.nodes.subflow(id);
@@ -373,6 +416,9 @@ export class Workspaces extends Context {
   }
 
   refresh() {
+    // fix
+    let RED = this.ctx
+
     let workspace_tabs = this.workspace_tabs
     RED.nodes.eachWorkspace(function (ws) {
       workspace_tabs.renameTab(ws.id, ws.label);

@@ -41,6 +41,7 @@ export class Tabs {
     let onTabClick = this.onTabClick.bind(this)
     let onTabDblClick = this.onTabDblClick.bind(this)
     let updateTabWidths = this.updateTabWidths.bind(this)
+    let updateScroll = this.updateScroll.bind(this)
 
     wrapper.addClass("red-ui-tabs");
     if (options.vertical) {
