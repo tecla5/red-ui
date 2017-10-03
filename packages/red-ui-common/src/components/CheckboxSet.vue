@@ -1,5 +1,5 @@
 <template>
-  <div class="red-ui-checkboxSet">
+  <div class="red-ui-checkboxSet" ref="checkboxSet">
     <h3>checkboxSet</h3>
   </div>
 </template>

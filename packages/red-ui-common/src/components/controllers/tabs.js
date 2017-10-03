@@ -209,12 +209,23 @@ export class Tabs {
     let ul = this.ul
     let wrapper = this.wrapper
 
+    // FIX: directly reference instance vars below?
+    let currentTabWidth = this.currentTabWidth
+    let currentActiveTabWidth = this.currentActiveTabWidth
+
     if (options.vertical) {
       return;
     }
     var tabs = ul.find("li.red-ui-tab");
+    if (!tabs) {
+      throw new Error("Missing tabs: li.red-ui-tab")
+    }
+    console.log({
+      tabs
+    })
     var width = wrapper.width();
-    var tabCount = tabs.size();
+    var tabCount = tabs.length;
+
     var tabWidth = (width - 12 - (tabCount * 6)) / tabCount;
     currentTabWidth = (100 * tabWidth / width) + "%";
     currentActiveTabWidth = currentTabWidth + "%";
