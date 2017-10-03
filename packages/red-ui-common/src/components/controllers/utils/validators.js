@@ -22,6 +22,7 @@ import utils from './utils'
 export class Validators extends Context {
   constructor(ctx) {
     super(ctx)
+    console.log('create Validators')
     ctx.utils = utils
   }
 

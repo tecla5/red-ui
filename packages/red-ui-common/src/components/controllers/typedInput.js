@@ -19,49 +19,63 @@ import {
 import {
   Validators
 } from './utils/validators'
+const log = console.log
 
+export default factory
 
-export default function factory(RED) {
-  const validators = new Validators(RED)
+function icon(uri) {
+  return 'images/typedInput/' + uri + '.png';
+}
+
+function factory(RED) {
+  // https://stackoverflow.com/questions/31013221/typeerror-console-log-is-not-a-function
+  console.log({
+    RED,
+    Validators
+  });
+  let validators = new Validators(RED);
+  console.log('create widget');
 
   (function ($) {
+    console.log('creating widget...', RED)
+
     var allOptions = {
       msg: {
-        value: "msg",
-        label: "msg.",
+        value: 'msg',
+        label: 'msg.',
         validate: RED.utils.validatePropertyExpression
       },
       flow: {
-        value: "flow",
-        label: "flow.",
+        value: 'flow',
+        label: 'flow.',
         validate: RED.utils.validatePropertyExpression
       },
       global: {
-        value: "global",
-        label: "global.",
+        value: 'global',
+        label: 'global.',
         validate: RED.utils.validatePropertyExpression
       },
       str: {
-        value: "str",
-        label: "string",
-        icon: "red/images/typedInput/az.png"
+        value: 'str',
+        label: 'string',
+        icon: icon('az')
       },
       num: {
-        value: "num",
-        label: "number",
-        icon: "red/images/typedInput/09.png",
+        value: 'num',
+        label: 'number',
+        icon: icon('09'),
         validate: /^[+-]?[0-9]*\.?[0-9]*([eE][-+]?[0-9]+)?$/
       },
       bool: {
-        value: "bool",
-        label: "boolean",
-        icon: "red/images/typedInput/bool.png",
-        options: ["true", "false"]
+        value: 'bool',
+        label: 'boolean',
+        icon: icon('bool'),
+        options: ['true', 'false']
       },
       json: {
-        value: "json",
-        label: "JSON",
-        icon: "red/images/typedInput/json.png",
+        value: 'json',
+        label: 'JSON',
+        icon: icon('json'),
         validate: function (v) {
           try {
             JSON.parse(v);
@@ -89,19 +103,19 @@ export default function factory(RED) {
         }
       },
       re: {
-        value: "re",
-        label: "regular expression",
-        icon: "red/images/typedInput/re.png"
+        value: 're',
+        label: 'regular expression',
+        icon: icon('re')
       },
       date: {
-        value: "date",
-        label: "timestamp",
+        value: 'date',
+        label: 'timestamp',
         hasValue: false
       },
       jsonata: {
-        value: "jsonata",
-        label: "expression",
-        icon: "red/images/typedInput/expr.png",
+        value: 'jsonata',
+        label: 'expression',
+        icon: icon('expr'),
         validate: function (v) {
           try {
             jsonata(v);
@@ -113,17 +127,17 @@ export default function factory(RED) {
         expand: function () {
           var that = this;
           RED.editor.editExpression({
-            value: this.value().replace(/\t/g, "\n"),
+            value: this.value().replace(/\t/g, '\n'),
             complete: function (v) {
-              that.value(v.replace(/\n/g, "\t"));
+              that.value(v.replace(/\n/g, '\t'));
             }
           })
         }
       },
       bin: {
-        value: "bin",
-        label: "buffer",
-        icon: "red/images/typedInput/bin.png",
+        value: 'bin',
+        label: 'buffer',
+        icon: icon('bin'),
         expand: function () {
           var that = this;
           RED.editor.editBuffer({
@@ -135,6 +149,10 @@ export default function factory(RED) {
         }
       }
     };
+    log({
+      allOptions
+    })
+
     var nlsd = false;
 
     $.widget("nodered.typedInput", {

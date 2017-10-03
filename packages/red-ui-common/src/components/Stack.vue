@@ -1,5 +1,6 @@
 <template>
   <div class="red-ui-stack">
+    <h3>stack</h3>
   </div>
 </template>
 <script>
@@ -8,7 +9,7 @@ import stack from './controllers/stack'
 
 export default {
   name: 'stack',
-  created() {
+  ready() {
     log('stack')
     let options = {}
     this.$el.querySelector('.red-ui-stack').stack(options)

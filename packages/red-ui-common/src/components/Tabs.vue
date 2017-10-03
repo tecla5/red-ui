@@ -1,5 +1,6 @@
 <template>
   <div class="red-ui-tabs">
+    <h3>tabs</h3>
   </div>
 </template>
 <script>
@@ -9,7 +10,7 @@ import './styles/tabs.scss'
 
 export default {
   name: 'tabs',
-  created() {
+  ready() {
     log('tabs')
     let options = {}
     this.$el.querySelector('.red-ui-tabs').tabs(options)

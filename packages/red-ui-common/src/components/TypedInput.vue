@@ -1,21 +1,37 @@
 <template>
-  <div class="red-ui-typedInput">
+  <div class="red-ui-typedInput" ref="typedInput">
+    <h3>typedInput</h3>
   </div>
 </template>
 <script>
 const log = console.log
 import typedInput from './controllers/typedInput'
+import {
+  default as $
+}
+  from 'jquery';
+
+// TODO: pass Singleton instance
+const RED = {
+  utils: {}
+}
+typedInput(RED)
 
 export default {
   name: 'typedInput',
-  created() {
+  mounted() {
     log('typedInput')
 
-    // TODO: pass Singleton instance
-    const RED = {
-      utils: {}
+    const options = {}
+
+    // let element = this.$el.querySelector('.red-ui-typedInput')
+    let element = this.$refs.typedInput
+    if (element) {
+      log(element)
+      $(element).typedInput(options)
+    } else {
+      log('missing element: .red-ui-typedInput', element, this.$el)
     }
-    this.$el.querySelector('.red-ui-typedInput').typedInput(RED)
   }
 }
 </script>
