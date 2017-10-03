@@ -3,7 +3,7 @@
   "name": "@tecla5/red-ui-common",
   "productName": "red-ui-common",
   "description": "node-red common components",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "poi",

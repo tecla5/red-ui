@@ -22,10 +22,12 @@ import WorkspaceToolbar from './WorkspaceToolbar'
 import { Workspaces } from './controllers/workspaces'
 const events = {}
 const actions = {}
+const menu = {}
 
 const RED = {
   events,
-  actions
+  actions,
+  menu
 }
 
 export default {

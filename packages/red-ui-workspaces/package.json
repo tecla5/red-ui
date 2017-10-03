@@ -17,9 +17,12 @@
   },
   "babel": {
     "presets": [
-      ["vue-app", {
-        "useBuiltIns": true
-      }]
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
     ]
   },
   "author": {
@@ -35,10 +38,11 @@
   "dependencies": {
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
-    "promise-polyfill": "^6.0.2",
-    "@tecla5/red-ui-common": "x"
+    "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
     "serve": "^6.1.0",

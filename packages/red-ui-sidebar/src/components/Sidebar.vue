@@ -9,14 +9,18 @@
 </template>
 <script>
 const log = console.log
-// import sidebar from './controllers/sidebar'
+import { Sidebar } from './controllers/sidebar'
+// import './styles/sidebar.scss'
 
 export default {
   name: 'sidebar',
-  created() {
+  mounted() {
     log('sidebar')
+    let RED = {
+      sidebar: {}
+    };
     let options = {}
-    // this.$el.querySelector('#sidebar').sidebar(options)
+    new Sidebar(RED)
   }
 }
 </script>

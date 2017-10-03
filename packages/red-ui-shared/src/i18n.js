@@ -13,14 +13,45 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+import {
+    Context
+} from './context'
+import i18n from 'i18next'
 
-class I18n {
-    constructor() {
+export class I18n extends Context {
+    constructor(ctx) {
+        super(ctx)
+        console.log({
+            i18n
+        })
+        ctx._ = () => {
+            return i18n.t.apply(null, arguments);
+        }
         this.i18n = i18n;
     }
 
     async init() {
-        await this.i18n.init({
+        try {
+            await this.i18n.init({
+                resGetPath: 'locales/__ns__?lng=__lng__',
+                dynamicLoad: false,
+                load: 'current',
+                ns: {
+                    namespaces: ["editor", "node-red", "jsonata", "infotips"],
+                    defaultNs: "editor"
+                },
+                fallbackLng: ['en-US'],
+                useCookie: false
+            })
+            return this.i18n.t.apply(null, arguments)
+        } catch (err) {
+            console.error(err)
+            throw err
+        }
+    }
+
+    initCb(cb) {
+        this.i18n.init({
             resGetPath: 'locales/__ns__?lng=__lng__',
             dynamicLoad: false,
             load: 'current',
@@ -30,8 +61,13 @@ class I18n {
             },
             fallbackLng: ['en-US'],
             useCookie: false
+        }, (err, t) => {
+            return this.i18n.t.apply(null, arguments)
+            if (cb) {
+                cb(this.i18n)
+            }
         })
-        return this.i18n.t.apply(null, arguments)
+
     }
 
     async loadCatalog(namespace) {

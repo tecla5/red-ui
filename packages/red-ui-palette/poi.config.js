@@ -18,5 +18,13 @@ module.exports = {
   },
   presets: [
     require('poi-preset-bundle-report')()
-  ]
+  ],
+  mergeConfig: {
+    module: {
+      rules: [{
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }]
+    }
+  }
 }

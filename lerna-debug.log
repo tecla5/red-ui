@@ -1,330 +1,248 @@
 0 silly input []
-1 silly flags { _: [ 'bootstrap' ], scope: '@tecla5/red-ui-app', args: [] }
+1 silly flags { _: [ 'bootstrap' ], scope: '@tecla5/red-ui-sidebar', args: [] }
 2 verbose rootPath /Users/kristianmandrup/repos/tecla5/red-ui
 3 info version 2.2.0
 4 silly existsSync /Users/kristianmandrup/repos/tecla5/red-ui/VERSION
-5 info scope @tecla5/red-ui-app
+5 info scope @tecla5/red-ui-sidebar
 6 silly initialize attempt
 7 silly initialize success
 8 silly execute attempt
 9 info Bootstrapping 1 packages
 10 info lifecycle preinstall
-11 silly runScript preinstall @tecla5/red-ui-app
-12 silly @tecla5/red-ui-app
-13 silly hasMatchingDependency @tecla5/red-ui-app @tecla5/red-ui-header
-14 silly hasMatchingDependency @tecla5/red-ui-app @tecla5/red-ui-main-container
-15 silly hasDependencyInstalled @tecla5/red-ui-app ava
-16 silly dependencyIsSatisfied [ 'ava',
-16 silly dependencyIsSatisfied   '^0.19.1',
-16 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-17 verbose dependencyIsSatisfied ava false
-18 silly hasDependencyInstalled @tecla5/red-ui-app browser-env
-19 silly dependencyIsSatisfied [ 'browser-env',
-19 silly dependencyIsSatisfied   '^2.0.31',
-19 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-20 verbose dependencyIsSatisfied browser-env false
-21 silly hasDependencyInstalled @tecla5/red-ui-app cross-env
-22 silly dependencyIsSatisfied [ 'cross-env',
-22 silly dependencyIsSatisfied   '^5.0.0',
-22 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-23 verbose dependencyIsSatisfied cross-env false
-24 silly hasDependencyInstalled @tecla5/red-ui-app node-sass
-25 silly dependencyIsSatisfied [ 'node-sass',
-25 silly dependencyIsSatisfied   '^4.5.3',
-25 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-26 verbose dependencyIsSatisfied node-sass false
-27 silly hasDependencyInstalled @tecla5/red-ui-app poi
-28 silly dependencyIsSatisfied [ 'poi',
-28 silly dependencyIsSatisfied   '^9.0.0',
-28 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-29 verbose dependencyIsSatisfied poi false
-30 silly hasDependencyInstalled @tecla5/red-ui-app poi-preset-bundle-report
-31 silly dependencyIsSatisfied [ 'poi-preset-bundle-report',
-31 silly dependencyIsSatisfied   '^2.0.0',
-31 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-32 verbose dependencyIsSatisfied poi-preset-bundle-report false
-33 silly hasDependencyInstalled @tecla5/red-ui-app require-extension-hooks
-34 silly dependencyIsSatisfied [ 'require-extension-hooks',
-34 silly dependencyIsSatisfied   '^0.2.0',
-34 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-35 verbose dependencyIsSatisfied require-extension-hooks false
-36 silly hasDependencyInstalled @tecla5/red-ui-app require-extension-hooks-babel
-37 silly dependencyIsSatisfied [ 'require-extension-hooks-babel',
-37 silly dependencyIsSatisfied   '^0.1.1',
-37 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-38 verbose dependencyIsSatisfied require-extension-hooks-babel false
-39 silly hasDependencyInstalled @tecla5/red-ui-app require-extension-hooks-vue
-40 silly dependencyIsSatisfied [ 'require-extension-hooks-vue',
-40 silly dependencyIsSatisfied   '^0.3.1',
-40 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-41 verbose dependencyIsSatisfied require-extension-hooks-vue false
-42 silly hasDependencyInstalled @tecla5/red-ui-app sass-loader
-43 silly dependencyIsSatisfied [ 'sass-loader',
-43 silly dependencyIsSatisfied   '^6.0.6',
-43 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-44 verbose dependencyIsSatisfied sass-loader false
-45 silly hasDependencyInstalled @tecla5/red-ui-app serve
-46 silly dependencyIsSatisfied [ 'serve',
-46 silly dependencyIsSatisfied   '^6.1.0',
-46 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-47 verbose dependencyIsSatisfied serve false
-48 silly hasDependencyInstalled @tecla5/red-ui-app webpack
-49 silly dependencyIsSatisfied [ 'webpack',
-49 silly dependencyIsSatisfied   '^3.6.0',
-49 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-50 verbose dependencyIsSatisfied webpack false
-51 silly hasDependencyInstalled @tecla5/red-ui-app normalize.css
-52 silly dependencyIsSatisfied [ 'normalize.css',
-52 silly dependencyIsSatisfied   '^7.0.0',
-52 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-53 verbose dependencyIsSatisfied normalize.css false
-54 silly hasDependencyInstalled @tecla5/red-ui-app object-assign
-55 silly dependencyIsSatisfied [ 'object-assign',
-55 silly dependencyIsSatisfied   '^4.1.1',
-55 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-56 verbose dependencyIsSatisfied object-assign false
-57 silly hasDependencyInstalled @tecla5/red-ui-app promise-polyfill
-58 silly dependencyIsSatisfied [ 'promise-polyfill',
-58 silly dependencyIsSatisfied   '^6.0.2',
-58 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-59 verbose dependencyIsSatisfied promise-polyfill false
-60 silly hasDependencyInstalled @tecla5/red-ui-app d3js
-61 silly dependencyIsSatisfied [ 'd3js',
-61 silly dependencyIsSatisfied   '^4.10.0',
-61 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-62 verbose dependencyIsSatisfied d3js false
-63 silly hasDependencyInstalled @tecla5/red-ui-app font-awesome
-64 silly dependencyIsSatisfied [ 'font-awesome',
-64 silly dependencyIsSatisfied   '^4.7.0',
-64 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-65 verbose dependencyIsSatisfied font-awesome false
-66 silly hasDependencyInstalled @tecla5/red-ui-app i18next
-67 silly dependencyIsSatisfied [ 'i18next',
-67 silly dependencyIsSatisfied   '^9.0.1',
-67 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-68 verbose dependencyIsSatisfied i18next false
-69 silly hasDependencyInstalled @tecla5/red-ui-app jquery
-70 silly dependencyIsSatisfied [ 'jquery',
-70 silly dependencyIsSatisfied   '^3.2.1',
-70 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-71 verbose dependencyIsSatisfied jquery false
-72 silly hasDependencyInstalled @tecla5/red-ui-app jsonata
-73 silly dependencyIsSatisfied [ 'jsonata',
-73 silly dependencyIsSatisfied   '^1.3.1',
-73 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-74 verbose dependencyIsSatisfied jsonata false
-75 silly hasDependencyInstalled @tecla5/red-ui-app bootstrap
-76 silly dependencyIsSatisfied [ 'bootstrap',
-76 silly dependencyIsSatisfied   '^3.3.7',
-76 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-77 verbose dependencyIsSatisfied bootstrap false
-78 silly hasDependencyInstalled @tecla5/red-ui-app bootstrap-select
-79 silly dependencyIsSatisfied [ 'bootstrap-select',
-79 silly dependencyIsSatisfied   '^1.12.4',
-79 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-80 verbose dependencyIsSatisfied bootstrap-select false
-81 silly hasDependencyInstalled @tecla5/red-ui-app ace
-82 silly dependencyIsSatisfied [ 'ace',
-82 silly dependencyIsSatisfied   '^1.3.0',
-82 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-83 verbose dependencyIsSatisfied ace false
-84 silly hasDependencyInstalled @tecla5/red-ui-app marked
-85 silly dependencyIsSatisfied [ 'marked',
-85 silly dependencyIsSatisfied   '^0.3.6',
-85 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/node_modules' ]
-86 verbose dependencyIsSatisfied marked false
-87 silly root dependencies []
-88 silly leaf dependencies {
-88 silly leaf dependencies   "@tecla5/red-ui-app": [
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "ava@^0.19.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "browser-env@^2.0.31",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "cross-env@^5.0.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "node-sass@^4.5.3",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "poi@^9.0.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "poi-preset-bundle-report@^2.0.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "require-extension-hooks@^0.2.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "require-extension-hooks-babel@^0.1.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "require-extension-hooks-vue@^0.3.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "sass-loader@^6.0.6",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "serve@^6.1.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "webpack@^3.6.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "normalize.css@^7.0.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "object-assign@^4.1.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "promise-polyfill@^6.0.2",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "d3js@^4.10.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "font-awesome@^4.7.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "i18next@^9.0.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "jquery@^3.2.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "jsonata@^1.3.1",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "bootstrap@^3.3.7",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "bootstrap-select@^1.12.4",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "ace@^1.3.0",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     },
-88 silly leaf dependencies     {
-88 silly leaf dependencies       "dependency": "marked@^0.3.6",
-88 silly leaf dependencies       "isSatisfied": false
-88 silly leaf dependencies     }
-88 silly leaf dependencies   ]
-88 silly leaf dependencies }
-89 info Installing external dependencies
-90 verbose actions 1 actions, concurrency 4
-91 silly installInDir red-ui-app [ 'ava@^0.19.1',
-91 silly installInDir   'browser-env@^2.0.31',
-91 silly installInDir   'cross-env@^5.0.0',
-91 silly installInDir   'node-sass@^4.5.3',
-91 silly installInDir   'poi@^9.0.0',
-91 silly installInDir   'poi-preset-bundle-report@^2.0.0',
-91 silly installInDir   'require-extension-hooks@^0.2.0',
-91 silly installInDir   'require-extension-hooks-babel@^0.1.1',
-91 silly installInDir   'require-extension-hooks-vue@^0.3.1',
-91 silly installInDir   'sass-loader@^6.0.6',
-91 silly installInDir   'serve@^6.1.0',
-91 silly installInDir   'webpack@^3.6.0',
-91 silly installInDir   'normalize.css@^7.0.0',
-91 silly installInDir   'object-assign@^4.1.1',
-91 silly installInDir   'promise-polyfill@^6.0.2',
-91 silly installInDir   'd3js@^4.10.0',
-91 silly installInDir   'font-awesome@^4.7.0',
-91 silly installInDir   'i18next@^9.0.1',
-91 silly installInDir   'jquery@^3.2.1',
-91 silly installInDir   'jsonata@^1.3.1',
-91 silly installInDir   'bootstrap@^3.3.7',
-91 silly installInDir   'bootstrap-select@^1.12.4',
-91 silly installInDir   'ace@^1.3.0',
-91 silly installInDir   'marked@^0.3.6' ]
-92 silly installInDir backup /Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json
-93 silly rename [ '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json',
-93 silly rename   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json.lerna_backup' ]
-94 silly installInDir writing tempJson { dependencies:
-94 silly installInDir    { ava: '^0.19.1',
-94 silly installInDir      'browser-env': '^2.0.31',
-94 silly installInDir      'cross-env': '^5.0.0',
-94 silly installInDir      'node-sass': '^4.5.3',
-94 silly installInDir      poi: '^9.0.0',
-94 silly installInDir      'poi-preset-bundle-report': '^2.0.0',
-94 silly installInDir      'require-extension-hooks': '^0.2.0',
-94 silly installInDir      'require-extension-hooks-babel': '^0.1.1',
-94 silly installInDir      'require-extension-hooks-vue': '^0.3.1',
-94 silly installInDir      'sass-loader': '^6.0.6',
-94 silly installInDir      serve: '^6.1.0',
-94 silly installInDir      webpack: '^3.6.0',
-94 silly installInDir      'normalize.css': '^7.0.0',
-94 silly installInDir      'object-assign': '^4.1.1',
-94 silly installInDir      'promise-polyfill': '^6.0.2',
-94 silly installInDir      d3js: '^4.10.0',
-94 silly installInDir      'font-awesome': '^4.7.0',
-94 silly installInDir      i18next: '^9.0.1',
-94 silly installInDir      jquery: '^3.2.1',
-94 silly installInDir      jsonata: '^1.3.1',
-94 silly installInDir      bootstrap: '^3.3.7',
-94 silly installInDir      'bootstrap-select': '^1.12.4',
-94 silly installInDir      ace: '^1.3.0',
-94 silly installInDir      marked: '^0.3.6' } }
-95 silly getExecOpts { cwd: '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app' }
-96 silly installInDir [ 'npm', [ 'install' ] ]
-97 silly installInDir cleanup /Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json
-98 silly renameSync [ '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json.lerna_backup',
-98 silly renameSync   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-app/package.json' ]
-99 verbose installed leaf @tecla5/red-ui-app
-100 error execute Error: Command failed: npm install
-100 error execute npm WARN deprecated fs-promise@0.5.0: Use mz or fs-extra^3.0 with Promise Support
-100 error execute npm WARN deprecated node-uuid@1.4.3: Use uuid module instead
-100 error execute npm ERR! code E404
-100 error execute npm ERR! 404 Not Found: d3js@^4.10.0
-100 error execute
-100 error execute npm ERR! A complete log of this run can be found in:
-100 error execute npm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-02T14_26_53_099Z-debug.log
-100 error execute
-100 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
-100 error execute     at <anonymous>
-100 error execute     at process._tickCallback (internal/process/next_tick.js:188:7)
-100 error execute  callback with error
-100 error execute  { Error: Command failed: npm install
-100 error execute npm WARN deprecated fs-promise@0.5.0: Use mz or fs-extra^3.0 with Promise Support
-100 error execute npm WARN deprecated node-uuid@1.4.3: Use uuid module instead
-100 error execute npm ERR! code E404
-100 error execute npm ERR! 404 Not Found: d3js@^4.10.0
-100 error execute
-100 error execute npm ERR! A complete log of this run can be found in:
-100 error execute npm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-02T14_26_53_099Z-debug.log
-100 error execute
-100 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
-100 error execute     at <anonymous>
-100 error execute     at process._tickCallback (internal/process/next_tick.js:188:7)
-100 error execute   stack: 'Error: Command failed: npm install\nnpm WARN deprecated fs-promise@0.5.0: Use mz or fs-extra^3.0 with Promise Support\nnpm WARN deprecated node-uuid@1.4.3: Use uuid module instead\nnpm ERR! code E404\nnpm ERR! 404 Not Found: d3js@^4.10.0\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-02T14_26_53_099Z-debug.log\n\n    at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)',
-100 error execute   code: 1,
-100 error execute   killed: false,
-100 error execute   stdout: '',
-100 error execute   stderr: 'npm WARN deprecated fs-promise@0.5.0: Use mz or fs-extra^3.0 with Promise Support\nnpm WARN deprecated node-uuid@1.4.3: Use uuid module instead\nnpm ERR! code E404\nnpm ERR! 404 Not Found: d3js@^4.10.0\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-02T14_26_53_099Z-debug.log\n',
-100 error execute   failed: true,
-100 error execute   signal: null,
-100 error execute   cmd: 'npm install',
-100 error execute   timedOut: false }
+11 silly runScript preinstall @tecla5/red-ui-sidebar
+12 silly @tecla5/red-ui-sidebar
+13 silly hasMatchingDependency @tecla5/red-ui-sidebar @tecla5/red-ui-common
+14 silly hasDependencyInstalled @tecla5/red-ui-sidebar node-sass
+15 silly dependencyIsSatisfied [ 'node-sass',
+15 silly dependencyIsSatisfied   '^4.5.3',
+15 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+16 verbose dependencyIsSatisfied node-sass false
+17 silly hasDependencyInstalled @tecla5/red-ui-sidebar sass-loader
+18 silly dependencyIsSatisfied [ 'sass-loader',
+18 silly dependencyIsSatisfied   '^6.0.6',
+18 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+19 verbose dependencyIsSatisfied sass-loader false
+20 silly hasDependencyInstalled @tecla5/red-ui-sidebar poi
+21 silly dependencyIsSatisfied [ 'poi',
+21 silly dependencyIsSatisfied   '^9.0.0',
+21 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+22 verbose dependencyIsSatisfied poi false
+23 silly hasDependencyInstalled @tecla5/red-ui-sidebar poi-preset-bundle-report
+24 silly dependencyIsSatisfied [ 'poi-preset-bundle-report',
+24 silly dependencyIsSatisfied   '^2.0.0',
+24 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+25 verbose dependencyIsSatisfied poi-preset-bundle-report false
+26 silly hasDependencyInstalled @tecla5/red-ui-sidebar serve
+27 silly dependencyIsSatisfied [ 'serve',
+27 silly dependencyIsSatisfied   '^6.1.0',
+27 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+28 verbose dependencyIsSatisfied serve false
+29 silly hasDependencyInstalled @tecla5/red-ui-sidebar ava
+30 silly dependencyIsSatisfied [ 'ava',
+30 silly dependencyIsSatisfied   '^0.19.1',
+30 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+31 verbose dependencyIsSatisfied ava false
+32 silly hasDependencyInstalled @tecla5/red-ui-sidebar cross-env
+33 silly dependencyIsSatisfied [ 'cross-env',
+33 silly dependencyIsSatisfied   '^5.0.0',
+33 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+34 verbose dependencyIsSatisfied cross-env false
+35 silly hasDependencyInstalled @tecla5/red-ui-sidebar browser-env
+36 silly dependencyIsSatisfied [ 'browser-env',
+36 silly dependencyIsSatisfied   '^2.0.31',
+36 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+37 verbose dependencyIsSatisfied browser-env false
+38 silly hasDependencyInstalled @tecla5/red-ui-sidebar require-extension-hooks
+39 silly dependencyIsSatisfied [ 'require-extension-hooks',
+39 silly dependencyIsSatisfied   '^0.2.0',
+39 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+40 verbose dependencyIsSatisfied require-extension-hooks false
+41 silly hasDependencyInstalled @tecla5/red-ui-sidebar require-extension-hooks-vue
+42 silly dependencyIsSatisfied [ 'require-extension-hooks-vue',
+42 silly dependencyIsSatisfied   '^0.3.1',
+42 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+43 verbose dependencyIsSatisfied require-extension-hooks-vue false
+44 silly hasDependencyInstalled @tecla5/red-ui-sidebar require-extension-hooks-babel
+45 silly dependencyIsSatisfied [ 'require-extension-hooks-babel',
+45 silly dependencyIsSatisfied   '^0.1.1',
+45 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+46 verbose dependencyIsSatisfied require-extension-hooks-babel false
+47 silly hasDependencyInstalled @tecla5/red-ui-sidebar @tecla5/red-ui-shared
+48 silly dependencyIsSatisfied [ '@tecla5/red-ui-shared',
+48 silly dependencyIsSatisfied   '^0.0.0',
+48 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+49 verbose dependencyIsSatisfied @tecla5/red-ui-shared false
+50 silly hasDependencyInstalled @tecla5/red-ui-sidebar jquery
+51 silly dependencyIsSatisfied [ 'jquery',
+51 silly dependencyIsSatisfied   '^3.2.1',
+51 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+52 verbose dependencyIsSatisfied jquery false
+53 silly hasDependencyInstalled @tecla5/red-ui-sidebar jquery-ui-dist
+54 silly dependencyIsSatisfied [ 'jquery-ui-dist',
+54 silly dependencyIsSatisfied   '^1.12.1',
+54 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+55 verbose dependencyIsSatisfied jquery-ui-dist false
+56 silly hasDependencyInstalled @tecla5/red-ui-sidebar normalize.css
+57 silly dependencyIsSatisfied [ 'normalize.css',
+57 silly dependencyIsSatisfied   '^7.0.0',
+57 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+58 verbose dependencyIsSatisfied normalize.css false
+59 silly hasDependencyInstalled @tecla5/red-ui-sidebar object-assign
+60 silly dependencyIsSatisfied [ 'object-assign',
+60 silly dependencyIsSatisfied   '^4.1.1',
+60 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+61 verbose dependencyIsSatisfied object-assign false
+62 silly hasDependencyInstalled @tecla5/red-ui-sidebar promise-polyfill
+63 silly dependencyIsSatisfied [ 'promise-polyfill',
+63 silly dependencyIsSatisfied   '^6.0.2',
+63 silly dependencyIsSatisfied   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/node_modules' ]
+64 verbose dependencyIsSatisfied promise-polyfill false
+65 silly root dependencies []
+66 silly leaf dependencies {
+66 silly leaf dependencies   "@tecla5/red-ui-sidebar": [
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "node-sass@^4.5.3",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "sass-loader@^6.0.6",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "poi@^9.0.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "poi-preset-bundle-report@^2.0.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "serve@^6.1.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "ava@^0.19.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "cross-env@^5.0.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "browser-env@^2.0.31",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "require-extension-hooks@^0.2.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "require-extension-hooks-vue@^0.3.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "require-extension-hooks-babel@^0.1.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "@tecla5/red-ui-shared@^0.0.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "jquery@^3.2.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "jquery-ui-dist@^1.12.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "normalize.css@^7.0.0",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "object-assign@^4.1.1",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     },
+66 silly leaf dependencies     {
+66 silly leaf dependencies       "dependency": "promise-polyfill@^6.0.2",
+66 silly leaf dependencies       "isSatisfied": false
+66 silly leaf dependencies     }
+66 silly leaf dependencies   ]
+66 silly leaf dependencies }
+67 info Installing external dependencies
+68 verbose actions 1 actions, concurrency 4
+69 silly installInDir red-ui-sidebar [ 'node-sass@^4.5.3',
+69 silly installInDir   'sass-loader@^6.0.6',
+69 silly installInDir   'poi@^9.0.0',
+69 silly installInDir   'poi-preset-bundle-report@^2.0.0',
+69 silly installInDir   'serve@^6.1.0',
+69 silly installInDir   'ava@^0.19.1',
+69 silly installInDir   'cross-env@^5.0.0',
+69 silly installInDir   'browser-env@^2.0.31',
+69 silly installInDir   'require-extension-hooks@^0.2.0',
+69 silly installInDir   'require-extension-hooks-vue@^0.3.1',
+69 silly installInDir   'require-extension-hooks-babel@^0.1.1',
+69 silly installInDir   '@tecla5/red-ui-shared@^0.0.0',
+69 silly installInDir   'jquery@^3.2.1',
+69 silly installInDir   'jquery-ui-dist@^1.12.1',
+69 silly installInDir   'normalize.css@^7.0.0',
+69 silly installInDir   'object-assign@^4.1.1',
+69 silly installInDir   'promise-polyfill@^6.0.2' ]
+70 silly installInDir backup /Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json
+71 silly rename [ '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json',
+71 silly rename   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json.lerna_backup' ]
+72 silly installInDir writing tempJson { dependencies:
+72 silly installInDir    { 'node-sass': '^4.5.3',
+72 silly installInDir      'sass-loader': '^6.0.6',
+72 silly installInDir      poi: '^9.0.0',
+72 silly installInDir      'poi-preset-bundle-report': '^2.0.0',
+72 silly installInDir      serve: '^6.1.0',
+72 silly installInDir      ava: '^0.19.1',
+72 silly installInDir      'cross-env': '^5.0.0',
+72 silly installInDir      'browser-env': '^2.0.31',
+72 silly installInDir      'require-extension-hooks': '^0.2.0',
+72 silly installInDir      'require-extension-hooks-vue': '^0.3.1',
+72 silly installInDir      'require-extension-hooks-babel': '^0.1.1',
+72 silly installInDir      '@tecla5/red-ui-shared': '^0.0.0',
+72 silly installInDir      jquery: '^3.2.1',
+72 silly installInDir      'jquery-ui-dist': '^1.12.1',
+72 silly installInDir      'normalize.css': '^7.0.0',
+72 silly installInDir      'object-assign': '^4.1.1',
+72 silly installInDir      'promise-polyfill': '^6.0.2' } }
+73 silly getExecOpts { cwd: '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar' }
+74 silly installInDir [ 'npm', [ 'install' ] ]
+75 silly installInDir cleanup /Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json
+76 silly renameSync [ '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json.lerna_backup',
+76 silly renameSync   '/Users/kristianmandrup/repos/tecla5/red-ui/packages/red-ui-sidebar/package.json' ]
+77 verbose installed leaf @tecla5/red-ui-sidebar
+78 error execute Error: Command failed: npm install
+78 error execute npm ERR! code E404
+78 error execute npm ERR! 404 Not Found: @tecla5/red-ui-shared@^0.0.0
+78 error execute
+78 error execute npm ERR! A complete log of this run can be found in:
+78 error execute npm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-03T15_10_36_697Z-debug.log
+78 error execute
+78 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+78 error execute     at <anonymous>
+78 error execute     at process._tickCallback (internal/process/next_tick.js:188:7)
+78 error execute  callback with error
+78 error execute  { Error: Command failed: npm install
+78 error execute npm ERR! code E404
+78 error execute npm ERR! 404 Not Found: @tecla5/red-ui-shared@^0.0.0
+78 error execute
+78 error execute npm ERR! A complete log of this run can be found in:
+78 error execute npm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-03T15_10_36_697Z-debug.log
+78 error execute
+78 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+78 error execute     at <anonymous>
+78 error execute     at process._tickCallback (internal/process/next_tick.js:188:7)
+78 error execute   stack: 'Error: Command failed: npm install\nnpm ERR! code E404\nnpm ERR! 404 Not Found: @tecla5/red-ui-shared@^0.0.0\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-03T15_10_36_697Z-debug.log\n\n    at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)',
+78 error execute   code: 1,
+78 error execute   killed: false,
+78 error execute   stdout: '',
+78 error execute   stderr: 'npm ERR! code E404\nnpm ERR! 404 Not Found: @tecla5/red-ui-shared@^0.0.0\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/kristianmandrup/.npm/_logs/2017-10-03T15_10_36_697Z-debug.log\n',
+78 error execute   failed: true,
+78 error execute   signal: null,
+78 error execute   cmd: 'npm install',
+78 error execute   timedOut: false }

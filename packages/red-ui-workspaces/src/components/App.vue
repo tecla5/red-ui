@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import { Workspaces } from './controllers/workspaces'
 
+import Workspace from './Workspace'
 export default {
   name: 'app',
   components: {
-    'red-workspaces': Workspaces
+    'red-workspaces': Workspace
   }
 }
 </script>

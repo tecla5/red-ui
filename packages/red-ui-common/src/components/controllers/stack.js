@@ -97,20 +97,21 @@ export class Stack {
 
   }
 
+  // FIX: use instance vars
   hide() {
-    visible = false;
-    entries.forEach(function (entry) {
+    this.visible = false;
+    this.entries.forEach((entry) => {
       entry.container.hide();
     });
     return this;
   }
 
+  // FIX: use instance vars
   show() {
-    visible = true;
-    entries.forEach(function (entry) {
+    this.visible = true;
+    this.entries.forEach((entry) => {
       entry.container.show();
     });
     return this;
   }
-
 }
