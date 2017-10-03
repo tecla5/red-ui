@@ -15,10 +15,18 @@
 </template>
 <script>
 const log = console.log
+import { PaletteEditor } from './controllers/editor'
+import { UserSettings } from '@tecla5/red-ui-settings/src/components/controllers/userSettings'
+
+let RED = {
+  userSettings: new UserSettings(RED)
+}
+
 export default {
   name: 'paletteEditor',
   created() {
     log('paletteEditor')
+    new PaletteEditor(RED)
   }
 }
 </script>

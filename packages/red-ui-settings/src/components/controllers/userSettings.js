@@ -67,7 +67,7 @@ const allSettings = {};
 
 import {
   Context
-} from '../context'
+} from './context'
 
 export class UserSettings extends Context {
 

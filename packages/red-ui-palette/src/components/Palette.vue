@@ -6,29 +6,32 @@
     </div>
     <red-palette-editor />
     <div id="palette-container" class="palette-scroll hide"></div>
-    <div id="palette-footer">
-      <a class="palette-button" id="palette-collapse-all" href="#">
-        <i class="fa fa-angle-double-up"></i>
-      </a>
-      <a class="palette-button" id="palette-expand-all" href="#">
-        <i class="fa fa-angle-double-down"></i>
-      </a>
-    </div>
+    <red-palette-footer />
     <div id="palette-shade" class="hide"></div>
   </div>
 </template>
 <script>
 const log = console.log
-import { Palette } from './Palette'
+import { Palette } from './controllers/palette'
+
 import { PaletteEditor } from './PaletteEditor'
+import {
+  Events
+} from '@tecla5/red-ui-shared/src/events'
+
+let RED = {
+  events: new Events(RED)
+}
+
 export default {
   name: 'palette',
   components: {
-    'red-palette-editor': PaletteEditor
+    'red-palette-editor': PaletteEditor,
+    'red-palette-footer': PaletteFooter
   },
   mounted() {
     log('editor')
-    new Palette()
+    new Palette(RED)
   }
 }
 </script>
