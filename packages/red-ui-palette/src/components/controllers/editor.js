@@ -16,6 +16,10 @@
 import {
   Context
 } from './context'
+import {
+  default as $
+} from 'jquery';
+
 
 export class PaletteEditor extends Context {
   constructor(ctx) {

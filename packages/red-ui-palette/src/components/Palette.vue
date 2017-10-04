@@ -13,8 +13,7 @@
 <script>
 const log = console.log
 import { Palette } from './controllers/palette'
-
-import { PaletteEditor } from './PaletteEditor'
+import PaletteEditor from './PaletteEditor'
 import {
   Events
 } from '@tecla5/red-ui-shared/src/events'

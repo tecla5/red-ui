@@ -21,6 +21,9 @@ export {
   PaletteEditor
 }
 from './editor'
+import {
+  default as $
+} from 'jquery';
 
 import {
   Context

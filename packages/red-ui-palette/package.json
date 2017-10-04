@@ -37,7 +37,8 @@
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2",
     "@tecla5/red-ui-shared": "^0.0.0",
-    "@tecla5/red-ui-settings": "^0.0.0"
+    "@tecla5/red-ui-settings": "^0.0.0",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

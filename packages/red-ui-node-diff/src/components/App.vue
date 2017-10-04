@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h3>Node Diff app</h3>
     <red-node-diff />
   </div>
 </template>

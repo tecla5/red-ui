@@ -9,7 +9,9 @@ export default {
   name: 'diff',
   mounted() {
     log('diff')
-    new Diff()
+    let RED = {
+    }
+    new Diff(RED)
   }
 }
 </script>

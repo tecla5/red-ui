@@ -6,7 +6,7 @@
 
 <script>
 const log = console.log
-import { Search } from './controllers/search'
+import Search from './Search'
 
 export default {
   name: 'app',

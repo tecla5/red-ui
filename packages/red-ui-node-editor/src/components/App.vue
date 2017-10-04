@@ -6,7 +6,7 @@
 
 <script>
 const log = console.log
-import { Editor } from './controllers/editor'
+import Editor from './Editor'
 
 export default {
   name: 'app',

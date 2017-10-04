@@ -3,11 +3,14 @@
   </div>
 </template>
 <script>
+import { Search } from './controllers/search'
 export default {
   name: 'search',
   mounted() {
     log('search')
-    new Search()
+    let RED = {
+    }
+    new Search(RED)
   }
 }
 </script>

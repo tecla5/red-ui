@@ -37,7 +37,8 @@
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2",
     "@tecla5/red-ui-tray": "x",
-    "@tecla5/red-ui-common": "x"
+    "@tecla5/red-ui-common": "x",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "poi": "^9.0.0",

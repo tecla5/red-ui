@@ -5,12 +5,16 @@
 <script>
 const log = console.log
 import { Editor } from './controllers/editor'
+import { Actions } from '@tecla5/red-ui-shared/src/ui/actions'
 
 export default {
   name: 'editor',
   mounted() {
     log('editor')
-    new Editor()
+    let RED = {
+      actions: new Actions(RED)
+    }
+    new Editor(RED)
   }
 }
 </script>

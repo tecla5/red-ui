@@ -16,6 +16,9 @@
 import {
   Context
 } from '../context'
+import {
+  default as $
+} from 'jquery';
 
 export class Search extends Context {
   constructor(ctx) {

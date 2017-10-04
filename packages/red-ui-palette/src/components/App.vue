@@ -6,7 +6,7 @@
 
 <script>
 const log = console.log
-import { Palette } from './controllers/palette'
+import Palette from './Palette'
 
 export default {
   name: 'app',
