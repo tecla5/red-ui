@@ -1,9 +1,69 @@
 # Architecture
 
-## Build
+The red-ui common components are core building blocks for the main parts of the editor.
+The original node-red components are jQuery components and widgets.
+
+We want to turn these components into Custom Elements (ie. Web Components) that are more composable and reusable on the modern web.
+
+We then aim to use these Custom elements to form Vue components that can be assembled in a Vue app.
+
+## Vue with Web Components
+
+- [integrating Vue with Web Components](https://alligator.io/vuejs/vue-integrate-web-components/)
+- [Your first Custom Element](https://alligator.io/web-components/your-first-custom-element/)
+
+## Lit-HTML elements
+
+- [lit html from Google](https://malloc.fi/lit-html-javascript-templating-from-polymer-team-google)
+- [lit html in detail](https://css-tricks.com/html-templates-via-javascript-template-literals/)
+
+Repos
+
+- [lit-html repo](https://github.com/PolymerLabs/lit-html)
+- [lit-element repo](https://github.com/kenchris/lit-element) will be used as the mechanism to build Web Components.
+
+### Writing lit-html custom elements
+
+Simply define a class that extends `LitElement` and provide a `render` method which uses html to render the template as a string literal.
+
+```js
+import { LitElement, html } from 'lit-element';
+
+class Panel extends LitElement {
+  render() {
+    return html`
+      <div>My panel</div>
+    `
+  }
+}
+customElements.define('red-ui-panel', Panel)
+```
+
+## red-ui-common
+
+- build
+- dependencies
+- components
+- controllers
+- ...
+
+### Build
 
 The build and packaging is done via [Poi](https://poi.js.org/#/)
 Configure the build process via `poi.config.js`, such as adding additional build plugins for [SASS](http://sass-lang.com/) etc.
+
+Already done:
+
+```js
+  mergeConfig: {
+    module: {
+      rules: [{
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }]
+    }
+  },
+```
 
 ## Dependency management
 

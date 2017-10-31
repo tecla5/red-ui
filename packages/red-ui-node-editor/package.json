@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "lit-html-element": "^0.6.10",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2",

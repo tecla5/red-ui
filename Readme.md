@@ -35,7 +35,10 @@ In each project, please see the `Changelog`, `TODO` and `Issues` document if ava
 
 ## Development Strategy
 
-The goal is to wrap each of the node-red components in Vue components, then gradually remove the jQuery logic to use Vue data binding logic instead.
+The goal is to wrap each of the node-red components as Custom elements.
+
+Then the Custom elements will be used to compose higher level Vue components.
+We wil then gradually remove the jQuery logic to use Vue data binding logic instead.
 
 Components should first be configured to work as a "blank slate", simply as a div with a placeholder message for the component:
 
@@ -46,6 +49,16 @@ Components should first be configured to work as a "blank slate", simply as a di
 ```
 
 Then assemble the components, bottom up and assemble the top level components in the `red-ui-app` package for a full static page.
+
+## Modern Custom Elements (ie. Web components)
+
+The Custom Elements will be designed using [lit-html-element](https://www.npmjs.com/package/lit-html-element), by Google (Polymer team).
+
+## Using Custom elements with Vue
+
+To use the Custom Elements with Vue, see the guide: [How to integrate vue with  web components](https://alligator.io/vuejs/vue-integrate-web-components/)
+
+For a quick guide to writing modern Custom Elements (aka. Web components), see [this guide](https://alligator.io/web-components/your-first-custom-element/)
 
 ## Lerna project
 
