@@ -74,6 +74,47 @@ Please use a test driven approach, see the `/test` folder.
 
 We aim to use [NightmareJS](http://www.nightmarejs.org/) for End-to-End acceptance testing (simulated browser user testing.
 
+## Individual Package structure
+
+Each package contains a selfish-contained Vue application project with a Poi configuration.
+
+The Vue app should be used to test out (Vue) components for the package as they are developed.
+
+- `src` all source files
+- `test` all test files (using `ava` for unit tests and `nightmarejs` for E2E tests)
+- `static` any static assets such as images etc
+
+### src
+
+TOOO: possibly move `static` folder here
+
+- `components` all component files
+
+#### components
+
+- `polyfills.js` ES6 browser polyfills
+- `index.js` Vue app bootstrap file (possibly)
+
+Note: You can change the bootstrap file used via `entry` in `poi.config.js`
+
+```js
+  entry: [
+    'src/polyfills.js',
+    'src/index.js'
+  ],
+```
+
+Same goes for the page template used, (ie. `template: path.join(__dirname, 'index.ejs')`)
+
+- `controllers` original component logic
+
+The controllers are self contained and control all their internal state and view updates using jQuery "magic" etc. Don't touch (too much!)
+
+- `vue` vue components (wrapping lit-elements, ie. custom elements)
+- `custom-elements` custom elements, using `lit-html`
+- `styles` CSS and Sass styles used by components
+- `util` various small/useful utility functions
+
 ### Writing lit-html custom elements
 
 Simply define a class that extends `LitElement` and provide a `render` method which uses html to render the template as a string literal.
