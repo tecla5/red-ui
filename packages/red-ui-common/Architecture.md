@@ -7,6 +7,16 @@ We want to turn these components into Custom Elements (ie. Web Components) that 
 
 We then aim to use these Custom elements to form Vue components that can be assembled in a Vue app.
 
+## Development guide
+
+Please use [git flow](https://guides.github.com/introduction/flow/) branch strategy during development.
+
+We will manage and track development directly on github, using [ZenHub](https://www.zenhub.com/) Kanban boards with cards.
+
+Please use a test driven approach, see the `/test` folder.
+
+We aim to use [NightmareJS](http://www.nightmarejs.org/) for End-to-End acceptance testing (simulated browser user testing.
+
 ## Vue with Web Components
 
 - [integrating Vue with Web Components](https://alligator.io/vuejs/vue-integrate-web-components/)
