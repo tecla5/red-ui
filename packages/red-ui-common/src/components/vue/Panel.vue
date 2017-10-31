@@ -6,20 +6,20 @@
 </template>
 <script>
 // <h3>panel</h3>
-const log = console.log
-import { Panel } from './controllers/panel'
+const log = console.log;
+import { Panel } from "../controllers/panel";
 
 // Note: Panel must have 2 children!
 export default {
-  name: 'panel',
+  name: "panel",
   mounted() {
-    log('panel')
+    log("panel");
     let options = {
-      id: 'my-panel'
-    }
-    new Panel(options)
+      id: "my-panel"
+    };
+    new Panel(options);
   }
-}
+};
 </script>
 
 <style lang="scss">

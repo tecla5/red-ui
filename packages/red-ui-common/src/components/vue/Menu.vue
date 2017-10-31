@@ -4,22 +4,20 @@
   </div>
 </template>
 <script>
-const log = console.log
-import { Menu } from './controllers/menu'
+const log = console.log;
+import { Menu } from "../controllers/menu";
 
 export default {
-  name: 'menu',
+  name: "menu",
   mounted() {
-    log('menu')
+    log("menu");
     let options = {
-      id: 'my-menu',
-      options: {
-
-      }
-    }
-    new Menu(options)
+      id: "my-menu",
+      options: {}
+    };
+    new Menu(options);
   }
-}
+};
 </script>
 
 <style lang="scss">

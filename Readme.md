@@ -31,7 +31,7 @@ Lerna is used to manage the module workflow, link package dependencies etc.
 
 ## Tracking development
 
-In each project, please see the `Changelog`, `TODO` and `Issues` document if available to see the status.
+In each project, please see and use the `Changelog.md`, `TODO.md` and `Issues.md` and `Testing.md` documents (if available) to track project status.
 
 ## Development Strategy
 
@@ -52,13 +52,44 @@ Then assemble the components, bottom up and assemble the top level components in
 
 ## Modern Custom Elements (ie. Web components)
 
-The Custom Elements will be designed using [lit-html-element](https://www.npmjs.com/package/lit-html-element), by Google (Polymer team).
+The Custom Elements will be designed using [lit-html-element](https://www.npmjs.com/package/lit-html-element), by Google (See below).
 
 ## Using Custom elements with Vue
 
-To use the Custom Elements with Vue, see the guide: [How to integrate vue with  web components](https://alligator.io/vuejs/vue-integrate-web-components/)
+To use the Custom Elements with Vue, see the guide: [integrating Vue with Web components](https://alligator.io/vuejs/vue-integrate-web-components/)
 
-For a quick guide to writing modern Custom Elements (aka. Web components), see [this guide](https://alligator.io/web-components/your-first-custom-element/)
+For a quick guide to writing modern Custom Elements (aka. Web components), see [writing Web Components](https://alligator.io/web-components/your-first-custom-element/)  guide
+
+We want to turn the original jquery widgets/components into Custom Elements (ie. Web Components) that are composable and reusable on the modern web.
+
+We then aim to use these Custom elements to form Vue components that can be assembled in a Vue app.
+
+## Development guide
+
+Please use [git flow](https://guides.github.com/introduction/flow/) branch strategy during development.
+
+We will manage and track development directly on github, using [ZenHub](https://www.zenhub.com/) Kanban boards with cards.
+
+Please use a test driven approach, see the `/test` folder.
+
+We aim to use [NightmareJS](http://www.nightmarejs.org/) for End-to-End acceptance testing (simulated browser user testing.
+
+### Writing lit-html custom elements
+
+Simply define a class that extends `LitElement` and provide a `render` method which uses html to render the template as a string literal.
+
+```js
+import { LitElement, html } from 'lit-element';
+
+class Panel extends LitElement {
+  render() {
+    return html`
+      <div>My panel</div>
+    `
+  }
+}
+customElements.define('red-ui-panel', Panel)
+```
 
 ## Lerna project
 

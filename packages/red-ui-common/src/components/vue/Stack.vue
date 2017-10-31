@@ -5,17 +5,17 @@
 </template>
 <script>
 // <h3>stack</h3>
-const log = console.log
-import { Stack } from './controllers/stack'
+const log = console.log;
+import { Stack } from "../controllers/stack";
 
 export default {
-  name: 'stack',
+  name: "stack",
   mounted() {
-    log('stack')
-    let options = {}
-    new Stack(options)
+    log("stack");
+    let options = {};
+    new Stack(options);
   }
-}
+};
 </script>
 
 <style lang="scss">

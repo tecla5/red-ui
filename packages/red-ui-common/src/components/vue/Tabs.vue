@@ -7,18 +7,18 @@
   </div>
 </template>
 <script>
-const log = console.log
-import { Tabs } from './controllers/tabs'
-import './styles/tabs.scss'
+const log = console.log;
+import { Tabs } from "../controllers/tabs";
+import "../styles/tabs.scss";
 
 export default {
-  name: 'tabs',
+  name: "tabs",
   mounted() {
-    log('tabs')
+    log("tabs");
     let options = {
-      id: 'my-tabs'
-    }
-    new Tabs(options)
+      id: "my-tabs"
+    };
+    new Tabs(options);
   }
-}
+};
 </script>
