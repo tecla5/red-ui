@@ -22,7 +22,20 @@ We aim to use [NightmareJS](http://www.nightmarejs.org/) for End-to-End acceptan
 - [integrating Vue with Web Components](https://alligator.io/vuejs/vue-integrate-web-components/)
 - [Your first Custom Element](https://alligator.io/web-components/your-first-custom-element/)
 
+## StencilJS
+
+StencilJS is a new "framework" by Ionic team, and compiles a TypeScript component into a VanillaJS custom element, with all the best from the leading frameworks.
+It looks super powerful, way better than Angular, React, Vue and all the rest.
+Perhaps hardly any need for these heavy frameworks anymore, except to act as application wrappes and manage global state, external communication and a few other things.
+
+- [StencilJS](https://stenciljs.com/)
+- [Stencil performance demo](https://stencil-fiber-demo.firebaseapp.com/) using Fiber rendering!
+- [#UseThePlaform with StencilJS](https://www.youtube.com/watch?v=8qlEWp22Vpc)
+- [Intro to StencilJS](https://www.youtube.com/watch?v=8qlEWp22Vpc)
+
 ## Lit-HTML elements
+
+Useful for lightweight components. Not yet sure if the common components should be written in Lit or StencilJS. Try/experiment with both and see what works best!
 
 - [lit html from Google](https://malloc.fi/lit-html-javascript-templating-from-polymer-team-google)
 - [lit html in detail](https://css-tricks.com/html-templates-via-javascript-template-literals/)

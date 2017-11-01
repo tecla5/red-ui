@@ -52,7 +52,12 @@ Then assemble the components, bottom up and assemble the top level components in
 
 ## Modern Custom Elements (ie. Web components)
 
-The Custom Elements will be designed using [lit-html-element](https://www.npmjs.com/package/lit-html-element), by Google (See below).
+The Custom Elements will be designed using either:
+
+- [lit-html-element](https://www.npmjs.com/package/lit-html-element) by Google
+- [stencilJS](https://www.youtube.com/watch?v=8qlEWp22Vpc) by Ionic team
+
+We belive StencilJS is way more powerful and is the way forward, at least for more complex components. lit-html might still be useful for super lightweight components (hence the name)
 
 ## Using Custom elements with Vue
 
@@ -111,9 +116,15 @@ Same goes for the page template used, (ie. `template: path.join(__dirname, 'inde
 The controllers are self contained and control all their internal state and view updates using jQuery "magic" etc. Don't touch (too much!)
 
 - `vue` vue components (wrapping lit-elements, ie. custom elements)
-- `custom-elements` custom elements, using `lit-html`
+- `custom-elements` custom elements, using `lit-html` or `stencilJS`
 - `styles` CSS and Sass styles used by components
 - `util` various small/useful utility functions
+
+## StencilJS
+
+- [StencilJS](https://stenciljs.com/)
+- [Stencil performance demo](https://stencil-fiber-demo.firebaseapp.com/) using Fiber rendering!
+- [#UseThePlaform with StencilJS](https://www.youtube.com/watch?v=8qlEWp22Vpc)
 
 ### Writing lit-html custom elements
 
