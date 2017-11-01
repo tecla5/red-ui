@@ -21,6 +21,7 @@ We aim to use [NightmareJS](http://www.nightmarejs.org/) for End-to-End acceptan
 
 - [integrating Vue with Web Components](https://alligator.io/vuejs/vue-integrate-web-components/)
 - [Your first Custom Element](https://alligator.io/web-components/your-first-custom-element/)
+- [Vue2 with Ionic4 via StencilJS](https://blog.paulhalliday.io/2017/10/04/how-to-use-vue-js-with-ionic-4/)
 
 ## StencilJS
 

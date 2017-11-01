@@ -125,8 +125,11 @@ The controllers are self contained and control all their internal state and view
 - [StencilJS](https://stenciljs.com/)
 - [Stencil performance demo](https://stencil-fiber-demo.firebaseapp.com/) using Fiber rendering!
 - [#UseThePlaform with StencilJS](https://www.youtube.com/watch?v=8qlEWp22Vpc)
+- [Vue2 with Ionic4 via StencilJS](https://blog.paulhalliday.io/2017/10/04/how-to-use-vue-js-with-ionic-4/)
 
 ### Writing lit-html custom elements
+
+For lightweight components without much logic, we can use `lit-html`.
 
 Simply define a class that extends `LitElement` and provide a `render` method which uses html to render the template as a string literal.
 
