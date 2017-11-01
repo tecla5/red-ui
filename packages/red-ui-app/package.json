@@ -49,7 +49,8 @@
     "ace-builds": "^1.2.8",
     "marked": "^0.3.6",
     "@tecla5/red-ui-header": "^0.0.0",
-    "@tecla5/red-ui-main-container": "^0.0.0"
+    "@tecla5/red-ui-main-container": "^0.0.0",
+    "@stencil/router": "^0.0.17"
   },
   "devDependencies": {
     "ava": "^0.19.1",

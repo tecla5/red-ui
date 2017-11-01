@@ -39,6 +39,8 @@
     "@tecla5/red-ui-common": "^0.0.0",
     "@tecla5/red-ui-shared": "^0.0.0",
     "lit-html-element": "^0.6.10",
+    "@stencil/core": "^0.0.6",
+    "@stencil/router": "^0.0.17",
     "jquery": "^3.2.1",
     "jquery-ui-dist": "^1.12.1",
     "marked": "^0.3.6",
